@@ -1,4 +1,7 @@
 ﻿using MedicinesManagement.Context;
+using MedicinesManagement.Repos.ActiveSubstances;
+using MedicinesManagement.Repos.Medicines;
+using MedicinesManagement.Services.Medicines;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -33,6 +36,9 @@ namespace MedicinesManagement
 
             });
 
+            services.AddScoped<IMedicinesRepo, MedicinesRepo>();
+            services.AddScoped<IActiveSubstancesRepo, ActiveSubstancesRepo>();
+            services.AddScoped<IMedicinesService, MedicinesService>();
 
             services.AddDbContext<AppDbContext>(options => options
             .UseSqlServer(Configuration.GetConnectionString("Default")).UseLazyLoadingProxies());

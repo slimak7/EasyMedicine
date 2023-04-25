@@ -1,10 +1,11 @@
 import csv
 import re
 from prettytable import PrettyTable
+from more_itertools import unique_everseen
 
 
 with open('records.csv', encoding="utf8") as csv_records:
-    records = csv.reader(csv_records, delimiter=';')
+    records = csv.reader(unique_everseen(csv_records), delimiter=';')
 
     medicinesTable = PrettyTable(["MedicineName", "Power", "CompanyName", "SubstanceName"])
 
@@ -15,9 +16,11 @@ with open('records.csv', encoding="utf8") as csv_records:
         if a != 0: 
             
             if len(row[7]) < 30 and row[7] != "-" and len(row[1]) < 30 and len(row[13]) < 30 and '\'' not in row[13] and row[15] != '' and len(row[15]) < 60: 
-                medicinesTable.add_row([row[1], row[7], row[13], row[15]])
+                newRow = [row[1], row[7], row[13], row[15]]                
+                medicinesTable.add_row(newRow)
                 
         a = 1
+        
 
     medicineValues = "insert into Medicines \nvalues"
     substanceValues = "insert into ActiveSubstances \nvalues"
@@ -30,6 +33,8 @@ with open('records.csv', encoding="utf8") as csv_records:
 
     medicineSubstances = [{}]
     medicineSubstances.clear()
+
+    substances = []
     
     for row in medicinesTable:
 
@@ -66,12 +71,13 @@ with open('records.csv', encoding="utf8") as csv_records:
             substanceName = substanceName[:-1]
             separatedSubstancesNames.append(substanceName)
             
-        medicineSubstances.append({"MedicineName": row.get_string(fields=["MedicineName"]).strip(), "Power": row.get_string(fields=["Power"]).strip(), "Substances" : separatedSubstancesNames})
+        medicineSubstances.append({"MedicineName": row.get_string(fields=["MedicineName"]).strip(), "Power": row.get_string(fields=["Power"]).strip(),"CompanyName": row.get_string(fields=["CompanyName"]).strip(), "Substances": separatedSubstancesNames})
 
         for element in separatedSubstancesNames:
-            if element not in substanceValues:
+            if element not in substances:
                 substanceValues += "(NEWID(), " + "'" + element + "')"
                 numberOfSubstancesRows += 1
+                substances.append(element)
                 if numberOfSubstancesRows != 1000:
                     substanceValues += ",\n"
                 else:
@@ -92,7 +98,7 @@ with open('records.csv', encoding="utf8") as csv_records:
     medicineSubstancesValues = ""
 
     for element in medicineSubstances:
-        medicineID = "declare @medicineID uniqueidentifier = (select top 1 MedicineID from Medicines where MedicineName = '" + element.get("MedicineName") + "' and Power = '" + element.get("Power") + "')\n" 
+        medicineID = "declare @medicineID uniqueidentifier = (select top 1 MedicineID from Medicines where MedicineName = '" + element.get("MedicineName") + "' and Power = '" + element.get("Power") + "' and CompanyName = '" + element.get("CompanyName") + "')\n" 
         for substance in element.get("Substances"):
             substanceID = "declare @substanceID uniqueidentifier = (select top 1 SubstanceID from ActiveSubstances where SubstanceName = '" + substance + "')\n" 
             medicineSubstancesValues += medicineID + substanceID + "insert into MedicineActiveSubstances values (NEWID(), @medicineID, @substanceID)\ngo\n" 
