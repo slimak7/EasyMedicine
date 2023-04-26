@@ -2,8 +2,8 @@
 {
     public abstract class BaseResponse
     {
-        bool Success { get; set; }
-        string Errors { get; set; }
+        public bool Success { get; set; }
+        public string Errors { get; set; }
 
         public BaseResponse(bool success, string errors)
         {

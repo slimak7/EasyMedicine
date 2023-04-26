@@ -11,7 +11,7 @@ select top 50 M.MedicineName, M.Power, Y.p from Medicines M inner join (select S
 
 select M.MedicineName, M.Power, S.SubstanceName from Medicines M inner join MedicineActiveSubstances MS on MS.MedicineID = M.MedicineID inner join ActiveSubstances S on S.SubstanceID = MS.ActiveSubstanceSubstanceID where M.MedicineName = 'Abacavir + Lamivudine Zentiva' 
 
-select * from Medicines where MedicineName = 'Xolair'
+select * from Medicines where MedicineName = 'Clozapine Aristo'
 
 select * from Medicines where MedicineName = 'Tantum Verde'
 

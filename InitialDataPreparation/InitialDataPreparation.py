@@ -1,22 +1,26 @@
 import csv
-import re
 from prettytable import PrettyTable
 from more_itertools import unique_everseen
 
 
 with open('records.csv', encoding="utf8") as csv_records:
-    records = csv.reader(unique_everseen(csv_records), delimiter=';')
+    records = csv.reader(csv_records, delimiter=';')
+    selectedColums = []
+    includedCols = [1, 7, 13, 15]
+    for row in records:
+        content = list(row[i] for i in includedCols)
+        selectedColums.append(content)
+    selectedRecords = unique_everseen(selectedColums)
 
     medicinesTable = PrettyTable(["MedicineName", "Power", "CompanyName", "SubstanceName"])
 
-
     a = 0
-    for row in records:
+    for row in selectedRecords:
 
         if a != 0: 
             
-            if len(row[7]) < 30 and row[7] != "-" and len(row[1]) < 30 and len(row[13]) < 30 and '\'' not in row[13] and row[15] != '' and len(row[15]) < 60: 
-                newRow = [row[1], row[7], row[13], row[15]]                
+            if len(row[1]) < 30 and row[1] != "-" and len(row[2]) < 30 and len(row[2]) < 30 and '\'' not in row[2] and row[3] != '' and len(row[3]) < 60: 
+                newRow = [row[0], row[1], row[2], row[3]]                
                 medicinesTable.add_row(newRow)
                 
         a = 1

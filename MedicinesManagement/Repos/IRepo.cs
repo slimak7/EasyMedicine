@@ -1,4 +1,6 @@
-﻿namespace MedicinesManagement.Repos
+﻿using System.Collections.Generic;
+
+namespace MedicinesManagement.Repos
 {
     public interface IRepo <T>
     {

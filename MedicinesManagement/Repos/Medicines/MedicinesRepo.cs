@@ -48,6 +48,11 @@ namespace MedicinesManagement.Repos.Medicines
         {
             var list = await GetAll();
 
+            if (index > list.Count() - 1)
+            {
+                return null;
+            }
+
             int numberOfAvailableElements = list.Count() - index;
 
             if (count > numberOfAvailableElements)
