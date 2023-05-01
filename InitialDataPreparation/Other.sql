@@ -16,3 +16,5 @@ select * from Medicines where MedicineName = 'Clozapine Aristo'
 select * from Medicines where MedicineName = 'Tantum Verde'
 
 select * from MedicineActiveSubstances where MedicineID = '6D4BFC16-67F2-4672-AFF8-F5D5B7570B58'
+
+select top 50 * from ActiveSubstances 

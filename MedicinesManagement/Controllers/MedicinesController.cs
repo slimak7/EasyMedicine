@@ -66,7 +66,7 @@ namespace MedicinesManagement.Controllers
 
         [HttpPost]
         [Route("GetMedicines/AddUpdateLeaflet")]
-        public async Task<IActionResult> GetMedicinesByRange([FromBody] AddUpdateLeafletRequest addUpdateLeafletRequest)
+        public async Task<IActionResult> AddUpdateLeaflet([FromBody] AddUpdateLeafletRequest addUpdateLeafletRequest)
         {
             if (!ModelState.IsValid)
             {
