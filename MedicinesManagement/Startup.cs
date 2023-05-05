@@ -1,4 +1,5 @@
-﻿using MedicinesManagement.Context;
+﻿using MedicinesManagement.AsyncDataServices;
+using MedicinesManagement.Context;
 using MedicinesManagement.Repos.ActiveSubstances;
 using MedicinesManagement.Repos.Medicines;
 using MedicinesManagement.Services.Medicines;
@@ -39,9 +40,14 @@ namespace MedicinesManagement
             services.AddScoped<IMedicinesRepo, MedicinesRepo>();
             services.AddScoped<IActiveSubstancesRepo, ActiveSubstancesRepo>();
             services.AddScoped<IMedicinesService, MedicinesService>();
+            services.AddSingleton<IMessageBusClient, MessageBusClient>();
 
             services.AddDbContext<AppDbContext>(options => options
-            .UseSqlServer(Configuration.GetConnectionString("Default")).UseLazyLoadingProxies());
+            .UseSqlServer(Configuration.GetConnectionString("Default"), options => 
+            options.EnableRetryOnFailure(
+                maxRetryCount: 2,
+                maxRetryDelay: System.TimeSpan.FromSeconds(20),
+                errorNumbersToAdd: null)).UseLazyLoadingProxies());
 
         }
 

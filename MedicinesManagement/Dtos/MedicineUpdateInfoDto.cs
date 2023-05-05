@@ -3,6 +3,6 @@
     public class MedicineUpdateInfoDto
     {
         public Guid MedicineID { get; set; }
-        public byte[] Leaflet { get; set; }
+        public IFormFile Leaflet { get; set; }
     }
 }

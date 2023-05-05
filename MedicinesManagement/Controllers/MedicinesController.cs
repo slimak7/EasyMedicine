@@ -1,4 +1,5 @@
-﻿using MedicinesManagement.Exceptions;
+﻿using MedicinesManagement.AsyncDataServices;
+using MedicinesManagement.Exceptions;
 using MedicinesManagement.RequestsModels;
 using MedicinesManagement.ResponseModels;
 using MedicinesManagement.Services.Medicines;
@@ -10,10 +11,12 @@ namespace MedicinesManagement.Controllers
     public class MedicinesController : ControllerBase
     {
         private IMedicinesService _medicinesService;
+        private IMessageBusClient _messageBusClient;
 
-        public MedicinesController(IMedicinesService medicinesService)
+        public MedicinesController(IMedicinesService medicinesService, IMessageBusClient messageBusClient)
         {
             _medicinesService = medicinesService;
+            _messageBusClient = messageBusClient;
         }
 
         [HttpGet]
@@ -66,7 +69,7 @@ namespace MedicinesManagement.Controllers
 
         [HttpPost]
         [Route("GetMedicines/AddUpdateLeaflet")]
-        public async Task<IActionResult> AddUpdateLeaflet([FromBody] AddUpdateLeafletRequest addUpdateLeafletRequest)
+        public async Task<IActionResult> AddUpdateLeaflet(AddUpdateLeafletRequest addUpdateLeafletRequest)
         {
             if (!ModelState.IsValid)
             {
@@ -74,6 +77,12 @@ namespace MedicinesManagement.Controllers
             }
             try
             {
+                _messageBusClient.PublishNewLeaflet(new Dtos.MedicineUpdateInfoDto()
+                {
+                    MedicineID = addUpdateLeafletRequest.MedicineID,
+                    Leaflet = addUpdateLeafletRequest.Leaflet
+                });
+
                 return Ok();
             }
             catch (DataAccessException e)
