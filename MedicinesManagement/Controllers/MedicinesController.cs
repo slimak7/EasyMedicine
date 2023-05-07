@@ -80,7 +80,8 @@ namespace MedicinesManagement.Controllers
                 _messageBusClient.PublishNewLeaflet(new Dtos.MedicineUpdateInfoDto()
                 {
                     MedicineID = addUpdateLeafletRequest.MedicineID,
-                    Leaflet = addUpdateLeafletRequest.Leaflet
+                    Leaflet = addUpdateLeafletRequest.Leaflet,
+                    EventName = "AddUpdateLeaflet"
                 });
 
                 return Ok();

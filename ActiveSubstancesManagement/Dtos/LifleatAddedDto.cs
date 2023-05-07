@@ -1,6 +1,6 @@
-﻿namespace MedicinesManagement.Dtos
+﻿namespace ActiveSubstancesManagement.Dtos
 {
-    public class MedicineUpdateInfoDto
+    public class LifleatAddedDto
     {
         public Guid MedicineID { get; set; }
         public IFormFile Leaflet { get; set; }
