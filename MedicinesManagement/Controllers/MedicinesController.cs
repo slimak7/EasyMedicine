@@ -4,6 +4,7 @@ using MedicinesManagement.RequestsModels;
 using MedicinesManagement.ResponseModels;
 using MedicinesManagement.Services.Medicines;
 using Microsoft.AspNetCore.Mvc;
+using System.IO;
 
 namespace MedicinesManagement.Controllers
 {
@@ -75,12 +76,24 @@ namespace MedicinesManagement.Controllers
             {
                 return new BadRequestObjectResult("Invalid data provided");
             }
+            string extension = Path.GetExtension(addUpdateLeafletRequest.Leaflet.FileName).ToLower();
+            if (extension != ".pdf")
+            {
+                return new BadRequestObjectResult("Invalid file extension");
+            }
             try
             {
+                byte[] bytes = null;
+                using (var memoryStream = new MemoryStream())
+                {
+                    addUpdateLeafletRequest.Leaflet.CopyTo(memoryStream);
+                    bytes = memoryStream.ToArray();
+                }
+
                 _messageBusClient.PublishNewLeaflet(new Dtos.MedicineUpdateInfoDto()
                 {
                     MedicineID = addUpdateLeafletRequest.MedicineID,
-                    Leaflet = addUpdateLeafletRequest.Leaflet,
+                    Leaflet = bytes,
                     EventName = "AddUpdateLeaflet"
                 });
 

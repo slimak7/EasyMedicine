@@ -1,0 +1,641 @@
+<?xml version="1.0" ?>
+<Translations Lang="PL">
+	<ActiveSubstance Name="Abakawir" SubstanceID="91B9A9D9-3EBB-41B0-BC16-764DEEAED1E4"/>
+	<ActiveSubstance Name="Aceklofenak" SubstanceID="99808173-1B6B-4940-8DBC-2127E8709F36"/>
+	<ActiveSubstance Name="Acemetacyna" SubstanceID="CD98F60B-3064-4240-BF96-A93B5446E2CD"/>
+	<ActiveSubstance Name="Acenokumarol" SubstanceID="60ED12BB-C0A2-42E3-AC9E-8A16EBBB599F"/>
+	<ActiveSubstance Name="Acetylocysteina" SubstanceID="D750EE66-7025-48FF-8BC3-2AFB341915E7"/>
+	<ActiveSubstance Name="Acyklowir" SubstanceID="01FC908D-B59F-4562-9738-A4ECD15ABF72"/>
+	<ActiveSubstance Name="Acytretyna" SubstanceID="B7FAFBBC-23BA-4C93-9DD7-274642B8C9F5"/>
+	<ActiveSubstance Name="Adalimumab" SubstanceID="34F5C003-DBDA-49B4-8132-499F46CDD780"/>
+	<ActiveSubstance Name="Adapalen" SubstanceID="3537D796-E29A-447D-B0B8-01341335601D"/>
+	<ActiveSubstance Name="Adenozyna" SubstanceID="1EEE859E-B2BD-4FD5-ACAA-92B76106F2EB"/>
+	<ActiveSubstance Name="Adrenalina" SubstanceID="7F541CD4-4DF6-4BFA-911C-2D5A4BA8699F"/>
+	<ActiveSubstance Name="Afamelanotyd" SubstanceID="C2688BB6-0F9E-42B4-BE5A-B259D08A2ADD"/>
+	<ActiveSubstance Name="Afilbercept" SubstanceID="5974942E-5863-4E8A-967A-3E1F67A14840"/>
+	<ActiveSubstance Name="Aflibercept" SubstanceID="5974942E-5863-4E8A-967A-3E1F67A14840"/>
+	<ActiveSubstance Name="Agomelatyna" SubstanceID="3075D8BB-5A7B-4BA2-9B19-18161B16603A"/>
+	<ActiveSubstance Name="Akamprozat (acetylohomotaurynian wapnia)" SubstanceID="96CF184D-2E67-4033-91D4-32763F472FBF"/>
+	<ActiveSubstance Name="Akarboza" SubstanceID="0511CDE7-9699-440B-87DB-6556D04DD36C"/>
+	<ActiveSubstance Name="Aksytynib" SubstanceID="37B38181-6D59-44B2-AC2A-E7C2E57BECAE"/>
+	<ActiveSubstance Name="Albendazol" SubstanceID="E7DE7F11-C3E9-4FA7-BE32-9FC3BD65F030"/>
+	<ActiveSubstance Name="Albumina ludzka" SubstanceID="0C9F58C8-50AB-4865-9436-5E3DE7A4F0D3"/>
+	<ActiveSubstance Name="Albutrepenonakog alfa" SubstanceID="45B30540-1AC4-4C94-8C0E-CDE8448CD6B4"/>
+	<ActiveSubstance Name="Alektynib" SubstanceID="113A7560-D0DD-46D5-B72E-F2CE0A1B3B63"/>
+	<ActiveSubstance Name="Alemtuzumab" SubstanceID="34740BBB-6F16-41F6-96B4-A1B9EC915342"/>
+	<ActiveSubstance Name="Alirokumab" SubstanceID="71AED95E-B392-4619-9624-3F8ADDB49A37"/>
+	<ActiveSubstance Name="Aliskiren" SubstanceID="4104BAA0-77C5-4064-8046-1C97D939A930"/>
+	<ActiveSubstance Name="Allopurynol" SubstanceID="2EACB34A-108D-4295-805C-CEF0B1242060"/>
+	<ActiveSubstance Name="Almotryptan" SubstanceID="90FC8A66-08A2-4877-B977-74B61D7E9889"/>
+	<ActiveSubstance Name="Alogliptyna" SubstanceID="DEA91390-CEF2-4A5D-AF61-E5D63D509F0D"/>
+	<ActiveSubstance Name="Alprazolam" SubstanceID="B9ED40AA-00B6-4945-B2A6-E1B283EAD053"/>
+	<ActiveSubstance Name="Alprostadyl" SubstanceID="58AD8D69-70CC-4F59-B6BB-DDA366579E62"/>
+	<ActiveSubstance Name="Ambazon" SubstanceID="18A080AB-8684-414D-8D11-FF717035D982"/>
+	<ActiveSubstance Name="Ambrisentan" SubstanceID="0E8E42FE-066E-45E0-8862-CC41D91A8D1E"/>
+	<ActiveSubstance Name="Amfoterycyna b" SubstanceID="7A75A603-2F23-42BF-B383-251C578ED0BC"/>
+	<ActiveSubstance Name="Amifamprydyna" SubstanceID="FB9B77CF-34E8-4C44-953B-E84936DE601F"/>
+	<ActiveSubstance Name="Amisulpryd" SubstanceID="56012DE6-1BDE-4CA2-A8A5-0757139CA9D9"/>
+	<ActiveSubstance Name="Amlodypina" SubstanceID="6093CDB2-3D4A-4944-B841-BDBB38457871"/>
+	<ActiveSubstance Name="Amoksycylina" SubstanceID="A60B5113-6115-4A08-BE11-FF8441D4B35B"/>
+	<ActiveSubstance Name="Amorolfina" SubstanceID="C36346A9-95D2-4CEC-A23D-6EE82F844836"/>
+	<ActiveSubstance Name="Amsakryna" SubstanceID="633C2C6E-54B5-42A9-A330-D69EF1F25592"/>
+	<ActiveSubstance Name="Anagrelid" SubstanceID="096CFF48-98F6-4857-9928-CF687916D00D"/>
+	<ActiveSubstance Name="Anakinra" SubstanceID="CD649A23-F4ED-45DF-9209-B90B1DA807B4"/>
+	<ActiveSubstance Name="Anastrozol" SubstanceID="14069C7A-0BC0-4E68-8F92-2D9474B589B7"/>
+	<ActiveSubstance Name="Anidulafungina" SubstanceID="4B1F3A35-3EF4-4DCA-A2CB-CFFD54E356A9"/>
+	<ActiveSubstance Name="Apiksaban" SubstanceID="5929A916-D5DD-4E77-86DC-38298B0FCF62"/>
+	<ActiveSubstance Name="Apremilast" SubstanceID="1B8209DE-7E7F-44E9-A53C-D4261D9FBA51"/>
+	<ActiveSubstance Name="Aprepitant" SubstanceID="593F1BFB-BAB1-4475-B274-62D3FA679726"/>
+	<ActiveSubstance Name="Arypiprazol (aripiprazol)" SubstanceID="DADBF7D2-0A7A-472D-8208-A3C289C28E28"/>
+	<ActiveSubstance Name="Asenapina" SubstanceID="C1337694-EE5B-4406-830B-8E12284A09B0"/>
+	<ActiveSubstance Name="Atazanawir" SubstanceID="88F360A3-2848-4C49-96F9-C6A9713D6EF1"/>
+	<ActiveSubstance Name="Atenolol" SubstanceID="6C2F4D70-A3A5-4D05-BEA4-43B6B8C5AF27"/>
+	<ActiveSubstance Name="Atorwastatyna" SubstanceID="D6E370BF-C238-4DFD-841B-2D9AD38542D3"/>
+	<ActiveSubstance Name="Atosiban" SubstanceID="4004CEF4-F768-4E37-9E95-FDBEF2BDBF3B"/>
+	<ActiveSubstance Name="Azacytydyna" SubstanceID="7F4E5B34-269A-4895-A307-339AE4C3375E"/>
+	<ActiveSubstance Name="Azatiopryna" SubstanceID="D9D72B12-4A1E-40C4-96F1-F9A0486035F1"/>
+	<ActiveSubstance Name="Aztreonam" SubstanceID="C1BCAC50-0E65-4098-B9D9-57C0499478C9"/>
+	<ActiveSubstance Name="Azylsartan" SubstanceID="13D920E0-0678-4885-BF4F-D857C64D838F"/>
+	<ActiveSubstance Name="Azytromycyna" SubstanceID="DF640EAC-3ED6-414D-BAA0-28A7E1C55763"/>
+	<ActiveSubstance Name="Bacytracyna" SubstanceID="072380DD-71CE-4870-B30D-5C139F8CCD76"/>
+	<ActiveSubstance Name="Baklofen" SubstanceID="2B6B6EF8-F0AB-4260-A9B0-6D89831BA228"/>
+	<ActiveSubstance Name="Baloxavir marboxil" SubstanceID="5AE9B3FC-4836-4A2C-8C20-97C77EB62BA7"/>
+	<ActiveSubstance Name="Baricytynib" SubstanceID="AF0975B4-1930-4D27-AB3D-2D2FF32477D5"/>
+	<ActiveSubstance Name="Bazedoksyfen" SubstanceID="5C7A684A-F80F-4F06-B706-265DACD8AA19"/>
+	<ActiveSubstance Name="Bazyliksymab" SubstanceID="AAC70A6A-1DC8-4FA2-9427-84F66968302C"/>
+	<ActiveSubstance Name="Benfotiamina" SubstanceID="42F3F45E-D97B-4CE6-AFAC-92C34AA612DA"/>
+	<ActiveSubstance Name="Benralizumab" SubstanceID="A3B7E407-404A-4727-B81E-D828B1AAB508"/>
+	<ActiveSubstance Name="Benzalkoniowy chlorek" SubstanceID="DE92B721-5D52-4FB4-ADF3-C73EF03D8143"/>
+	<ActiveSubstance Name="Benzokaina (anestezyna)" SubstanceID="8E153651-4589-4CDA-BC25-041B454B70B7"/>
+	<ActiveSubstance Name="Benzylopenicylina prokainowa" SubstanceID="7B2D65DF-2A91-4084-BB8F-88C163344188"/>
+	<ActiveSubstance Name="Betametazon" SubstanceID="E66B573A-3A92-49D3-BEA3-2DD61C2743B1"/>
+	<ActiveSubstance Name="Bewacyzumab" SubstanceID="581F1169-D667-4145-8E32-C90C99D8A904"/>
+	<ActiveSubstance Name="Bezylezomab" SubstanceID="2F499121-391D-4C2E-AF8C-CEE482E6B535"/>
+	<ActiveSubstance Name="Bifonazol" SubstanceID="30B28770-BBBE-40C1-96DB-62CB9792AEA0"/>
+	<ActiveSubstance Name="Bikalutamid" SubstanceID="6E259A33-D570-4199-A1D7-1D8DC33E17A1"/>
+	<ActiveSubstance Name="Bilastyna" SubstanceID="75CDD349-509C-4C12-9616-412CA0DE96DA"/>
+	<ActiveSubstance Name="Biotyna" SubstanceID="A5345515-F366-4AB0-9FBC-ACEB8A101921"/>
+	<ActiveSubstance Name="Bisakodyl" SubstanceID="6C7CE77F-4BB4-4B2B-A29D-8BA9BB79B863"/>
+	<ActiveSubstance Name="Blinatumomab" SubstanceID="B141C417-4876-4AF2-A217-C3A6ED423530"/>
+	<ActiveSubstance Name="Bortezomib" SubstanceID="121F603E-1F51-4268-AD4C-D11F2B0A3BF0"/>
+	<ActiveSubstance Name="Bosentan" SubstanceID="D2621D6B-93B5-416D-A3F6-4C8D7DD2B572"/>
+	<ActiveSubstance Name="Bosutinib" SubstanceID="B98C5FA3-B471-42D7-9E53-4A62E96421E4"/>
+	<ActiveSubstance Name="Brimonidyna" SubstanceID="A640B066-6D28-43AB-926A-F61DCC6C4CFA"/>
+	<ActiveSubstance Name="Brinzolamid" SubstanceID="AC8E6E67-2D6A-477B-8228-9C819637CEB4"/>
+	<ActiveSubstance Name="Briwaracetam" SubstanceID="59BD1FB9-1DE8-4689-8C76-4558BC23182F"/>
+	<ActiveSubstance Name="Brolucizumab" SubstanceID="D9114A70-9744-4ED4-BAA4-94E90334A9C8"/>
+	<ActiveSubstance Name="Bromek ipratropium" SubstanceID="CF43AB43-D921-486F-9A73-1406EB3B33E5"/>
+	<ActiveSubstance Name="Bromfenak" SubstanceID="0493BF74-9D47-4536-9C4F-50D07EBEAE77"/>
+	<ActiveSubstance Name="Brygatynib" SubstanceID="E96DAFC7-6872-444D-B016-29C5812F64EE"/>
+	<ActiveSubstance Name="Bupiwakaina" SubstanceID="DD8F630F-CB95-4CC1-98F2-25DFFCBB6886"/>
+	<ActiveSubstance Name="Buprenorfina" SubstanceID="A8CA17D5-7EFA-41CC-A9FF-5FD3BCCDB5B8"/>
+	<ActiveSubstance Name="Burosumab" SubstanceID="AC6538F2-F0F5-4501-A6CD-2D844136BC1B"/>
+	<ActiveSubstance Name="Busulfan" SubstanceID="D7E8FEFD-8DBE-4525-976A-5D1DE54756EC"/>
+	<ActiveSubstance Name="Cefadroksyl" SubstanceID="7BCE227F-CEB6-4BF2-8B1B-0F68C89F1A4A"/>
+	<ActiveSubstance Name="Cefoperazon" SubstanceID="B9B2BCB1-EC04-45EF-A06C-C1E753F57398"/>
+	<ActiveSubstance Name="Cefotaksym" SubstanceID="D5848FF4-1D46-4C83-833B-12E84C4AE358"/>
+	<ActiveSubstance Name="Ceftazydym" SubstanceID="82716337-011D-4958-A217-BF2F33B8B920"/>
+	<ActiveSubstance Name="Ceftolozan" SubstanceID="FA0884A6-18BD-4CAF-B00E-C181ECC68EF3"/>
+	<ActiveSubstance Name="Cefuroksym" SubstanceID="AC34BF38-A576-4EAB-AFD7-4C46C8B4124F"/>
+	<ActiveSubstance Name="Cerebrolizyna" SubstanceID="400B29B1-5C9F-4969-B80F-62723217F65D"/>
+	<ActiveSubstance Name="Cetroreliks" SubstanceID="01E2E5DF-D322-489F-80EC-D21E6ACFDE4B"/>
+	<ActiveSubstance Name="Cetuksymab" SubstanceID="D053D35F-FA23-4E11-BC34-CF0286B95B66"/>
+	<ActiveSubstance Name="Chinagolid" SubstanceID="E4213456-3CE0-425A-9590-F59BAB07BF10"/>
+	<ActiveSubstance Name="Chinapryl" SubstanceID="A8958E28-5DBF-449F-BB5C-4B74FD434BB4"/>
+	<ActiveSubstance Name="Chlorambucyl (chlorambucil)" SubstanceID="FFE66D2E-648E-40E5-9F3D-0834B641D4C8"/>
+	<ActiveSubstance Name="Chlorek benzoksoniowy" SubstanceID="8E628AEE-BBC4-4A9D-A089-72110F8D03F0"/>
+	<ActiveSubstance Name="Chlorek potasu" SubstanceID="55D003E5-8E59-4E80-A8A5-31C54B2569D5"/>
+	<ActiveSubstance Name="Chlorochinaldol" SubstanceID="F681EEF9-8C08-458A-ADAB-9C4ECFB1A62E"/>
+	<ActiveSubstance Name="Cilazapryl" SubstanceID="08103A85-7C35-4119-9A49-A659AB6DC78E"/>
+	<ActiveSubstance Name="Cilostazol" SubstanceID="F416AA7B-1548-42B1-94C8-7CB7781DDF65"/>
+	<ActiveSubstance Name="Ciprofibrat" SubstanceID="FA417B56-35A8-4046-A9ED-AFB12BCE3B68"/>
+	<ActiveSubstance Name="Ciprofloksacyna" SubstanceID="4378A7F0-C503-4C2D-A87A-6EFD02942254"/>
+	<ActiveSubstance Name="Cisatrakurium" SubstanceID="952843DA-82D8-47BF-9341-B220F30000C2"/>
+	<ActiveSubstance Name="Citalopram" SubstanceID="6D822679-8FB4-4D7C-8E52-FC951C82E742"/>
+	<ActiveSubstance Name="Cyklofosfamid" SubstanceID="3976CF0F-C6F2-4E39-AE57-6B01F092A8A4"/>
+	<ActiveSubstance Name="Cyklosporyna" SubstanceID="66F53E01-A89E-4E86-944B-DEDEE379B40D"/>
+	<ActiveSubstance Name="Cynakalcet" SubstanceID="7F7AFCC8-80A1-49EC-B40D-F0E27216BD57"/>
+	<ActiveSubstance Name="Cynaryzyna" SubstanceID="A0BCC658-46C1-48A5-A059-681D3A716BE1"/>
+	<ActiveSubstance Name="Cytarabina" SubstanceID="FB3D02D0-B1BE-4947-8F66-F7D772060F68"/>
+	<ActiveSubstance Name="Cytrynian magnezu" SubstanceID="227EA99C-3950-424D-95D4-E17200B43D25"/>
+	<ActiveSubstance Name="Cytyzyna" SubstanceID="A547F963-D60C-4E26-A083-9806A67D4C89"/>
+	<ActiveSubstance Name="Danazol" SubstanceID="C8E97639-4D7F-4BA1-9784-3FA7D80BFECE"/>
+	<ActiveSubstance Name="Dapagliflozyna" SubstanceID="CC32B057-2707-4E32-9108-6E78F9A573D4"/>
+	<ActiveSubstance Name="Dapoksetyna" SubstanceID="595D28C2-BE27-4A4F-9F19-4F78E935CC72"/>
+	<ActiveSubstance Name="Daptomycyna" SubstanceID="047DA338-78A8-46A8-A5A3-1653DFD33533"/>
+	<ActiveSubstance Name="Darbepoetyna alfa" SubstanceID="076F2A6B-B6F9-4BE9-9BEE-126040C5FC43"/>
+	<ActiveSubstance Name="Darunawir" SubstanceID="863EC511-021A-4729-8A48-E8AE557B292E"/>
+	<ActiveSubstance Name="Daryfenacyna" SubstanceID="767288F0-7B06-4E91-9209-12117BAD6C2C"/>
+	<ActiveSubstance Name="Deferazyroks" SubstanceID="36955A7A-A22E-456D-99D1-F55595E5C52F"/>
+	<ActiveSubstance Name="Deferypron" SubstanceID="7E170A0E-9465-4531-891B-D10572C318EE"/>
+	<ActiveSubstance Name="Defibrotyd" SubstanceID="F415A25C-3D44-4C8D-A609-53EBAD5D6932"/>
+	<ActiveSubstance Name="Deksametazon" SubstanceID="D47085C0-50D1-4B93-A611-8D833716B7BD"/>
+	<ActiveSubstance Name="Deksibuprofen" SubstanceID="C7EA8561-A46B-48A8-BEA8-54B1258BD808"/>
+	<ActiveSubstance Name="Deksketoprofen" SubstanceID="FEDC6638-B557-48D4-A527-3B0650496360"/>
+	<ActiveSubstance Name="Dekslanzoprazol" SubstanceID="049D6025-1482-4B0C-88E1-11F3C0491156"/>
+	<ActiveSubstance Name="Deksmedetomidyna" SubstanceID="6BB2021E-CC5F-4659-9486-32BD18F6DFF1"/>
+	<ActiveSubstance Name="Deksrazoksan" SubstanceID="B56DB235-9871-42AC-BF7D-446BA9B9EF96"/>
+	<ActiveSubstance Name="Dekstran" SubstanceID="B6A500EB-4DB4-46F1-A892-9202217DF784"/>
+	<ActiveSubstance Name="Delamanid" SubstanceID="75EE2F09-E49B-491A-9D7D-56AAAB29F6C7"/>
+	<ActiveSubstance Name="Denotywir" SubstanceID="7BAF160A-5178-47D9-A951-D174B2107FE1"/>
+	<ActiveSubstance Name="Desfluran" SubstanceID="65706934-57CD-418E-86FE-92742EB69541"/>
+	<ActiveSubstance Name="Desloratadyna" SubstanceID="940DC128-7C67-4912-861E-14652580BBE7"/>
+	<ActiveSubstance Name="Desmopresyna" SubstanceID="7ED8D85B-ADC3-4F87-8A22-27E4B9E26B9B"/>
+	<ActiveSubstance Name="Dezogestrel" SubstanceID="B92818A8-E495-433C-8E6C-C2F8C965A395"/>
+	<ActiveSubstance Name="Diazepam" SubstanceID="4A1E094A-73D2-4218-9D55-63E3160F0D6A"/>
+	<ActiveSubstance Name="Dienogest" SubstanceID="5B9B97A7-3C73-474D-9CD3-8FF246CE7809"/>
+	<ActiveSubstance Name="Digoksyna" SubstanceID="FC077D9A-A644-4466-9642-8DC1E9C2AE1C"/>
+	<ActiveSubstance Name="Dimenhydrynat" SubstanceID="EF90E87B-24D9-4CE3-9507-8B8F487CE6AA"/>
+	<ActiveSubstance Name="Dinoproston" SubstanceID="C2B9C1BF-A410-4226-B88C-5F79B90884B3"/>
+	<ActiveSubstance Name="Diosmektyt" SubstanceID="B7A9353A-BDFE-4CE8-9B63-A6FB930425DD"/>
+	<ActiveSubstance Name="Diosmina" SubstanceID="45D63D69-21E6-4556-B3BE-F0156369E75D"/>
+	<ActiveSubstance Name="Dobesylan wapnia" SubstanceID="4506A2D2-1A29-45A7-9F72-E25D01ABFD8A"/>
+	<ActiveSubstance Name="Doksazosyna" SubstanceID="F7F99389-9864-472D-BD70-225A33DAD84E"/>
+	<ActiveSubstance Name="Doksycyklina" SubstanceID="EF3872D7-9605-425A-ACED-645FDCA4EE85"/>
+	<ActiveSubstance Name="Dolutegrawir" SubstanceID="0BAAF47B-2D92-478A-ACFC-0402ED819298"/>
+	<ActiveSubstance Name="Dornaza alfa" SubstanceID="48BA1CBB-8128-4E38-AD1C-B171E3089A68"/>
+	<ActiveSubstance Name="Dorzolamid" SubstanceID="95196F5B-9D5C-4806-837E-5C4D9FCB127E"/>
+	<ActiveSubstance Name="Drospirenon" SubstanceID="FD2D867C-8031-4630-9057-6D70800DED04"/>
+	<ActiveSubstance Name="Dulaglutyd" SubstanceID="FF9AE879-3C97-4272-AEC1-D2BBBBA6E7D9"/>
+	<ActiveSubstance Name="Duloksetyna" SubstanceID="9DA3A17D-A54F-4537-8A26-6A6799CEAFDC"/>
+	<ActiveSubstance Name="Dutasteryd" SubstanceID="61F10D6F-A065-467E-AD83-56A89B55E72B"/>
+	<ActiveSubstance Name="Dydrogesteron" SubstanceID="A67E1082-E437-45A0-8308-F1FBE4AA83EF"/>
+	<ActiveSubstance Name="Edoksaban" SubstanceID="8194D685-1701-4397-AA04-5A077FAFC7F9"/>
+	<ActiveSubstance Name="Efawirenz" SubstanceID="D69C71F3-780C-4A94-B5B2-335778340C2B"/>
+	<ActiveSubstance Name="Eflornityna" SubstanceID="09F75688-7223-4248-B426-00B322ECC785"/>
+	<ActiveSubstance Name="Eftrenonakog alfa" SubstanceID="5F947692-5471-4FD1-AA4E-DAD91CE6B919"/>
+	<ActiveSubstance Name="Eksemestan" SubstanceID="0D764BC1-1AC7-4278-B05F-9FF3059446A8"/>
+	<ActiveSubstance Name="Elbaswir" SubstanceID="447024FA-CC98-4411-99E4-012571D67D4A"/>
+	<ActiveSubstance Name="Eletryptan" SubstanceID="D04C4CF7-CF35-4B89-A8A1-EC5EF8543C52"/>
+	<ActiveSubstance Name="Eliglustat" SubstanceID="8F1DE426-19AE-47CB-9C8E-14FFC8608B13"/>
+	<ActiveSubstance Name="Elosulfaza alfa" SubstanceID="150FE7A2-54AC-4213-8C5B-BB00C3DB3DD7"/>
+	<ActiveSubstance Name="Eltrombopag" SubstanceID="E018782B-12C7-4982-A10A-1019C3CB7F33"/>
+	<ActiveSubstance Name="Emtrycytabina" SubstanceID="C88D3227-0498-40AC-98BF-08A512BF634F"/>
+	<ActiveSubstance Name="Entakapon" SubstanceID="A600482C-8E03-42F1-9321-DA10958AFE80"/>
+	<ActiveSubstance Name="Entekawir" SubstanceID="2B299D93-5020-4F44-AB54-260FB745353D"/>
+	<ActiveSubstance Name="Enzalutamid" SubstanceID="7A4E50D2-6E5B-454E-A584-01A4E8CDDC2E"/>
+	<ActiveSubstance Name="Eplerenon" SubstanceID="5C77BC98-8D6B-4E06-A005-0A229722D7DB"/>
+	<ActiveSubstance Name="Epoetyna alfa" SubstanceID="54167DE6-A541-4D62-AB2D-B87BB3CB0DEA"/>
+	<ActiveSubstance Name="Epoetyna beta" SubstanceID="F6B7612B-19AA-4B3B-8300-D0D920E999F8"/>
+	<ActiveSubstance Name="Epoetyna teta" SubstanceID="2B7B3AA5-DBE6-49EE-A8C5-9F2CC1558AB0"/>
+	<ActiveSubstance Name="Epoetyna zeta" SubstanceID="61777939-7171-4333-BB42-7CFEC0E7D185"/>
+	<ActiveSubstance Name="Eprosartan" SubstanceID="5DB518A5-6730-470E-9140-94D1FE6A98E8"/>
+	<ActiveSubstance Name="Eptyfibatyd" SubstanceID="8F565EB1-D682-4091-A6CC-5D349C062807"/>
+	<ActiveSubstance Name="Erdosteina" SubstanceID="E84D1B38-7E02-4858-83CD-9F57A74470F5"/>
+	<ActiveSubstance Name="Erenumab" SubstanceID="7981C59A-9B2D-44C6-851E-34752767DE7D"/>
+	<ActiveSubstance Name="Erlotynib" SubstanceID="7FB6BB39-4008-4430-B482-47F652794A72"/>
+	<ActiveSubstance Name="Ertapenem" SubstanceID="30061416-CD0D-4599-BA78-19CB7D2FE007"/>
+	<ActiveSubstance Name="Escitalopram" SubstanceID="5C056A6E-80CC-4D2F-8B6D-63D91E9AA819"/>
+	<ActiveSubstance Name="Escyna" SubstanceID="3CE78C4D-C4FE-4E10-B48A-4B485217A29F"/>
+	<ActiveSubstance Name="Esomeprazol" SubstanceID="858F7DCB-B32F-4D43-AB2B-71FA1A6F9254"/>
+	<ActiveSubstance Name="Estazolam" SubstanceID="E248F167-0CEE-4E48-832D-789440774B29"/>
+	<ActiveSubstance Name="Estradiol" SubstanceID="E15EA49E-9F0F-49F3-8C40-E1D9BC30A0E6"/>
+	<ActiveSubstance Name="Estriol" SubstanceID="8B655CEA-C10B-474B-8124-2DC09B5DD94A"/>
+	<ActiveSubstance Name="Etamsylat" SubstanceID="C8CCD0B2-E5AD-4679-BF58-F264FD0B248C"/>
+	<ActiveSubstance Name="Etanercept" SubstanceID="24827551-E1D7-4062-90B8-5D71094E6669"/>
+	<ActiveSubstance Name="Etelkalcetyd" SubstanceID="74D1A56A-0B5B-46F5-BC6E-D5554F2451FE"/>
+	<ActiveSubstance Name="Etofenamat" SubstanceID="E4B49789-563D-454A-876D-55A627395ACF"/>
+	<ActiveSubstance Name="Etomidat" SubstanceID="619D36B6-F288-4E38-9ED4-470A40218812"/>
+	<ActiveSubstance Name="Etonogestrel" SubstanceID="9E3FBF6E-859F-4ACB-A26A-DF4EA6D03023"/>
+	<ActiveSubstance Name="Etynyloestradiol" SubstanceID="32B85F7B-E209-400B-8618-86F7D362FC4C"/>
+	<ActiveSubstance Name="Ewolokumab" SubstanceID="BEC097F8-244B-4928-B407-A918C271BCCE"/>
+	<ActiveSubstance Name="Ezetimib" SubstanceID="349754FD-EE2F-4203-8755-F55B0FA49F49"/>
+	<ActiveSubstance Name="Famprydyna" SubstanceID="12AB6B78-9908-4AC9-B7F1-EC01666E2C97"/>
+	<ActiveSubstance Name="Febuksostat" SubstanceID="8AAFFB2E-5D78-42EB-A329-E60224D87369"/>
+	<ActiveSubstance Name="Felodypina" SubstanceID="59E5F211-2477-44A4-8933-6C5191E4369B"/>
+	<ActiveSubstance Name="Fenobarbital (luminal)" SubstanceID="3962DF3A-0C62-46E9-8C78-1CEF72270182"/>
+	<ActiveSubstance Name="Fenofibrat" SubstanceID="4918C07B-F1CD-4EF4-AE9E-1882BCAC3EE4"/>
+	<ActiveSubstance Name="Fentanyl" SubstanceID="1EB8E82C-F10D-4FFB-9BBC-51C2243991BD"/>
+	<ActiveSubstance Name="Fenylefryna" SubstanceID="F8AAD02D-57FA-4FA9-9675-4261844B9228"/>
+	<ActiveSubstance Name="Fenylomaślan glicerolu" SubstanceID="79950963-669F-4090-A181-CAC2B8BD6487"/>
+	<ActiveSubstance Name="Fenylomaślanu sodu" SubstanceID="2E8B9F2E-A7DA-4C54-8152-8EA6C44B1C51"/>
+	<ActiveSubstance Name="Filgrastym" SubstanceID="5201ED7A-B797-4E99-98D9-9D891BF4FC2E"/>
+	<ActiveSubstance Name="Finasteryd" SubstanceID="1BACA5FB-0583-402F-8502-0305981F0A70"/>
+	<ActiveSubstance Name="Fingolimod" SubstanceID="848DF89C-BFE9-401A-AABB-0E9AD5D32BC7"/>
+	<ActiveSubstance Name="Flukonazol" SubstanceID="F738334B-9601-4D9E-B8C5-00EFDA52CFAD"/>
+	<ActiveSubstance Name="Flumazenil" SubstanceID="5F279A4F-A74D-4486-B24B-69B6A7C9621D"/>
+	<ActiveSubstance Name="Fluocynolon" SubstanceID="6D627521-ED33-4146-BBDC-78829401487E"/>
+	<ActiveSubstance Name="Fluoksetyna" SubstanceID="4E97D965-4221-48BD-B236-EE5F135A1932"/>
+	<ActiveSubstance Name="Fluorek sodu" SubstanceID="E2ABAB0E-4BC9-4540-9748-8ABBFD6C01C1"/>
+	<ActiveSubstance Name="Fluoresceina" SubstanceID="3F1B688F-1425-42D6-AB2B-45427380EC74"/>
+	<ActiveSubstance Name="Fluorometolon" SubstanceID="2F612BDB-EA0E-41FD-BD33-2F1B3A9DFF6F"/>
+	<ActiveSubstance Name="Fluorouracyl" SubstanceID="31BBAA87-A24A-46CB-AB0D-6860D2476CBF"/>
+	<ActiveSubstance Name="Flurbiprofen" SubstanceID="8D33CEBB-8EBF-4D3C-8B82-EF7A842D9DE3"/>
+	<ActiveSubstance Name="Flutamid" SubstanceID="C7D9E7DE-CFB4-433E-8CF7-F6CB49111DE6"/>
+	<ActiveSubstance Name="Flutemetamol" SubstanceID="640BC073-E51A-4568-BD77-761CA7147423"/>
+	<ActiveSubstance Name="Fluwastatyna" SubstanceID="6FEFF133-7BDC-45A5-B422-EBC0986135D2"/>
+	<ActiveSubstance Name="Fosamprenawir" SubstanceID="D8637B05-26BD-430C-B707-E5BB30919E4B"/>
+	<ActiveSubstance Name="Fosfomycyna" SubstanceID="DBC04A5C-81F6-42CB-92F3-34EEDAC157C8"/>
+	<ActiveSubstance Name="Fotemustyna" SubstanceID="AB0DBBC5-C9BA-4C39-B10A-A946C2566852"/>
+	<ActiveSubstance Name="Furosemid" SubstanceID="C3C85D3B-97D2-4DFD-939B-D87FBF850217"/>
+	<ActiveSubstance Name="Gabapentyna" SubstanceID="5446ED69-FE43-4EB7-BCDA-5D65B5E081CF"/>
+	<ActiveSubstance Name="Gadobutrol" SubstanceID="8030CE96-4D1D-4336-BA5A-6647C1F6EAE8"/>
+	<ActiveSubstance Name="Gadodiamid" SubstanceID="67C7F60F-0C39-47E5-ACFC-7A677589C1F5"/>
+	<ActiveSubstance Name="Galantamina" SubstanceID="B55355DE-33CF-4C90-9F4B-65196A4076A5"/>
+	<ActiveSubstance Name="Galkanezumab" SubstanceID="D21279BD-29C1-4791-ACA1-18748A2E53B9"/>
+	<ActiveSubstance Name="Gancyklowir" SubstanceID="21F308DF-2CBE-49F5-AB3D-240F8921A7A3"/>
+	<ActiveSubstance Name="Ganireliks" SubstanceID="FA771DAD-DD56-4587-85BE-9229B0D09DF0"/>
+	<ActiveSubstance Name="Gestoden" SubstanceID="D9D3D9A3-0A3D-417F-B9E1-FF12A54914CD"/>
+	<ActiveSubstance Name="Glicerofosforan sodu" SubstanceID="6B953EEF-F09D-4B22-A991-3827B562699E"/>
+	<ActiveSubstance Name="Gliklazyd" SubstanceID="89577AA1-6F80-460A-A31E-00FDBFA59D3A"/>
+	<ActiveSubstance Name="Glikwidon" SubstanceID="C6F90946-CF73-4237-8216-09F820595425"/>
+	<ActiveSubstance Name="Glimepiryd" SubstanceID="85DEC0A4-07AE-46F0-92DA-9959FB7B0BB9"/>
+	<ActiveSubstance Name="Glipizyd" SubstanceID="6A6E78AF-DB8F-4049-841C-BF93F9DB7FD2"/>
+	<ActiveSubstance Name="Glukonian wapnia" SubstanceID="B2B6972D-42E7-49C6-AC66-3A941DBE9F52"/>
+	<ActiveSubstance Name="Glukonolaktobionian wapnia" SubstanceID="AF0AB519-6776-4A37-BFF8-6F74D71DCBE3"/>
+	<ActiveSubstance Name="Golimumab" SubstanceID="4C50C793-CDBD-4DEB-9D98-A85079C450F3"/>
+	<ActiveSubstance Name="Grazoprewir" SubstanceID="68FF3507-5504-434E-B3CD-E9BE863537AB"/>
+	<ActiveSubstance Name="Heksylorezorcynol" SubstanceID="A2E7335D-5F9B-4431-A71B-5540DC760761"/>
+	<ActiveSubstance Name="Hemina ludzka" SubstanceID="628A3378-E16E-40F1-AD56-727D6A597D30"/>
+	<ActiveSubstance Name="Hialuronian sodu" SubstanceID="9A60B048-4C39-4666-A0EB-002DD78C7020"/>
+	<ActiveSubstance Name="Hydrochlorotiazyd" SubstanceID="A02CE0AE-1070-4F65-8492-5493B5F69D03"/>
+	<ActiveSubstance Name="Hydrokortyzon" SubstanceID="53514D82-19E1-434C-8491-7A16BCD92C3F"/>
+	<ActiveSubstance Name="Hydroksykarbamid" SubstanceID="3A74DD00-A9C1-4239-ACE5-DB3EF7F88DE9"/>
+	<ActiveSubstance Name="Hydroksykobalamina" SubstanceID="887886FE-BB32-42C6-92E7-93C2EDF9737F"/>
+	<ActiveSubstance Name="Hydroksymaślanu sodu" SubstanceID="28254718-032B-4E60-A947-21E25059124D"/>
+	<ActiveSubstance Name="Hymekromon" SubstanceID="47ACB498-1D3D-4C31-A4E4-3590311C99B1"/>
+	<ActiveSubstance Name="Hypromeloza" SubstanceID="3A0CAF54-BC5B-48DB-BDA7-105E07DBF0C7"/>
+	<ActiveSubstance Name="Ibuprofen" SubstanceID="139744C3-60B2-49AB-AB6D-CDF7E9850AD1"/>
+	<ActiveSubstance Name="Ifosfamid" SubstanceID="EC2FDDA3-9AE7-403C-BB61-2E75051C07C1"/>
+	<ActiveSubstance Name="Ikatybant" SubstanceID="74372524-086C-4787-98C9-CCC87A4E77D9"/>
+	<ActiveSubstance Name="Iksazomib" SubstanceID="7D0C22D9-224F-444B-829D-1CF889F847EA"/>
+	<ActiveSubstance Name="Iloprost" SubstanceID="38EE1E71-BD61-4D5E-81E6-CD23404B12D0"/>
+	<ActiveSubstance Name="Imatynib" SubstanceID="4A89D08A-D1BD-4EFA-9874-B71293CE2855"/>
+	<ActiveSubstance Name="Imigluceraza" SubstanceID="FA64F0A3-87A8-4C32-8AE2-32DE7CD8BE32"/>
+	<ActiveSubstance Name="Imikwimod" SubstanceID="EC4F3DA2-C8EC-4777-AB9F-4BE3313531F0"/>
+	<ActiveSubstance Name="Imipenem" SubstanceID="62F449D2-E1E9-4AA7-B609-90759A782B0B"/>
+	<ActiveSubstance Name="Immunoglobulina ludzka normalna" SubstanceID="CB85074F-E6B6-470A-A941-A538070D1E2A"/>
+	<ActiveSubstance Name="Immunoglobulina ludzka przeciw wirusowemu zapaleniu wątroby typu b" SubstanceID="00821A6B-7193-4E71-9548-6BCE8D26A07B"/>
+	<ActiveSubstance Name="Indapamid" SubstanceID="63618721-B2FD-47AB-8044-74FB5B400781"/>
+	<ActiveSubstance Name="Indometacyna" SubstanceID="462F4B4A-9EDE-493E-9AE3-E55D57790945"/>
+	<ActiveSubstance Name="Infliksymab" SubstanceID="B5BA80B7-3542-4A88-A5E9-1E8CF9D63BF6"/>
+	<ActiveSubstance Name="Inozyny pranobeks" SubstanceID="915B4F91-8F05-438C-8939-5D51590F3713"/>
+	<ActiveSubstance Name="Insulina detemir" SubstanceID="FE66BA8E-0751-4861-B04F-55094E7219E0"/>
+	<ActiveSubstance Name="Insulina glargine" SubstanceID="AF96AB61-5E0E-4498-AEA1-5B9CB8295F4B"/>
+	<ActiveSubstance Name="Insulina lispro" SubstanceID="3C508B41-9577-41F1-965D-303072F17E28"/>
+	<ActiveSubstance Name="Insulina neutralna" SubstanceID="0440B2E2-1118-478F-A299-A86F65EF1296"/>
+	<ActiveSubstance Name="Iprazochrom" SubstanceID="92BB2C01-B200-4E1A-9905-F6FA623F8A87"/>
+	<ActiveSubstance Name="Irbesartan" SubstanceID="85CFCD13-F935-49AB-B8A1-DC70C11F1819"/>
+	<ActiveSubstance Name="Itrakonazol" SubstanceID="A9F624FE-7D68-4E11-9068-BD3E146C4C01"/>
+	<ActiveSubstance Name="Iwabradyna" SubstanceID="24793879-953F-44ED-AE7D-4CF160572E89"/>
+	<ActiveSubstance Name="Iwermektyna" SubstanceID="A4215A11-79D7-4C62-B016-58AC2B842518"/>
+	<ActiveSubstance Name="Izofluran" SubstanceID="F00D9181-020B-4BE4-8175-6C6466C3EB00"/>
+	<ActiveSubstance Name="Izoniazyd" SubstanceID="7FA4F82C-9F1A-4E11-B870-C973D0024618"/>
+	<ActiveSubstance Name="Izotretynoina (izotretinoina)" SubstanceID="948FE35E-E349-4517-9B92-8C1F7D479358"/>
+	<ActiveSubstance Name="Jod i jodki" SubstanceID="A35317EB-C372-4354-8C62-E425F88F055A"/>
+	<ActiveSubstance Name="Jodiksanol" SubstanceID="66877662-2A6F-48AA-BCF7-B19590AAC8AE"/>
+	<ActiveSubstance Name="Jodopowidon" SubstanceID="67A6985C-7281-4009-AE87-367C8AF6F359"/>
+	<ActiveSubstance Name="Joheksol" SubstanceID="C6C3E7BE-683B-41E9-8A00-A3E8720AD47A"/>
+	<ActiveSubstance Name="Jopromid" SubstanceID="F72555F4-1327-445A-BC9F-5C36DB4ECA2F"/>
+	<ActiveSubstance Name="Jowersol" SubstanceID="9B1977F0-8096-4E6C-B475-B67FBE37F0A6"/>
+	<ActiveSubstance Name="Kabazytaksel" SubstanceID="B7D3DEA7-3B27-4B1A-958B-48967D3AB3EB"/>
+	<ActiveSubstance Name="Kabergolina" SubstanceID="395FF02D-DCFC-40FB-AE3E-38024DEB8FC4"/>
+	<ActiveSubstance Name="Kalcyfediol" SubstanceID="7B3E9F11-0336-4F77-87F5-077AE6945200"/>
+	<ActiveSubstance Name="Kalcypotriol" SubstanceID="58F47072-0001-47CF-9182-BA7256DC3062"/>
+	<ActiveSubstance Name="Kanakinumab" SubstanceID="5D3EF27A-7939-45F4-8A8F-D2E951C775D9"/>
+	<ActiveSubstance Name="Kanrenoinian potasu" SubstanceID="0E9A6292-1DBB-4E4B-B2B4-00861ED7B037"/>
+	<ActiveSubstance Name="Kapecytabina" SubstanceID="BE54C57C-4D8B-4EB8-B96D-6A044D0F4BCE"/>
+	<ActiveSubstance Name="Kapsaicyna" SubstanceID="EB3C2212-3995-42B0-A37D-6E620BA86B07"/>
+	<ActiveSubstance Name="Kaptopril" SubstanceID="6A948C15-DA0F-4DCD-B83F-76F330AB3CEE"/>
+	<ActiveSubstance Name="Karbamazepina" SubstanceID="350D3305-0248-4A7A-82ED-5BF659CF82DA"/>
+	<ActiveSubstance Name="Karbetocyna" SubstanceID="F4579C27-82DD-40A3-9BE4-B049AD17B2EF"/>
+	<ActiveSubstance Name="Karbidopa" SubstanceID="686D23F2-D797-4307-BD9D-99292EEC0596"/>
+	<ActiveSubstance Name="Karbocysteina" SubstanceID="9F227E66-56EC-4E93-A71A-537A4CD12A8D"/>
+	<ActiveSubstance Name="Karbomer (kwas poliakrylowy)" SubstanceID="40C444BC-5BA7-4AF2-852F-984380F3F867"/>
+	<ActiveSubstance Name="Karboplatyna" SubstanceID="352DA4E1-E3F2-412E-A062-F21D8536A025"/>
+	<ActiveSubstance Name="Karmustyna" SubstanceID="188AE9A9-A9E0-4A20-AAE5-38D896609DC0"/>
+	<ActiveSubstance Name="Karwedilol" SubstanceID="DCF56CE6-864E-4C2A-A7E0-A5577C7EA5C4"/>
+	<ActiveSubstance Name="Kaspofungina" SubstanceID="E574C078-C9AC-4C12-B1E9-B997652FD747"/>
+	<ActiveSubstance Name="Ketamina" SubstanceID="24F5BCAC-5342-4551-8064-6DB2E0006022"/>
+	<ActiveSubstance Name="Ketokonazol" SubstanceID="FA3C9EC7-F1BC-445E-8709-B0CCB888EEA1"/>
+	<ActiveSubstance Name="Ketoprofen" SubstanceID="98866B9D-67CB-46F5-A8C5-F4FA1F098589"/>
+	<ActiveSubstance Name="Kladrybina" SubstanceID="EE506252-9387-4369-9AF2-280F13E96C98"/>
+	<ActiveSubstance Name="Klarytromycyna" SubstanceID="C710C5F4-230A-47E9-817A-38DA22EAC4A9"/>
+	<ActiveSubstance Name="Klindamycyna" SubstanceID="D930D377-8179-4FB5-87EA-DB50257BA019"/>
+	<ActiveSubstance Name="Klobazam" SubstanceID="E6896D19-616C-41EC-B138-B98CF017D38E"/>
+	<ActiveSubstance Name="Klopamid" SubstanceID="26898506-4BA6-41B8-9BA0-6657FE3F90D0"/>
+	<ActiveSubstance Name="Klopidogrel" SubstanceID="E96A9F84-6654-4CEB-AEBD-A397C1F8CC15"/>
+	<ActiveSubstance Name="Klorazepat" SubstanceID="C5C4E439-9AA2-459E-A979-EA5F8C9F4017"/>
+	<ActiveSubstance Name="Klotrimazol" SubstanceID="CEF315E9-4E43-4C72-BC18-F90FBDBBF822"/>
+	<ActiveSubstance Name="Klozapina" SubstanceID="370161C8-5D25-4430-BA45-3F79DDFFE159"/>
+	<ActiveSubstance Name="Kobicystat" SubstanceID="232ABE01-2258-46DD-AB4B-FBA67117B5A1"/>
+	<ActiveSubstance Name="Kodeina" SubstanceID="1F49822C-CF5B-47A5-8531-1833D7BF9B28"/>
+	<ActiveSubstance Name="Kolchicyna" SubstanceID="2F91B76D-5A92-4C56-9FF7-DDF319434EE8"/>
+	<ActiveSubstance Name="Kolistyna (kolistymetat sodowy)" SubstanceID="512D17EE-FC17-4A49-9C5A-521568A5C7DD"/>
+	<ActiveSubstance Name="Kompleks wodorotlenku żelaza (iii) z dekstranem" SubstanceID="D23635BF-F487-4D9B-A59F-022AC0B55028"/>
+	<ActiveSubstance Name="Kompleks wodorotlenku żelaza (iii) z sacharozą" SubstanceID="CDBA6AF9-866D-499B-BD70-E7F5A709C42C"/>
+	<ActiveSubstance Name="Konestat alfa" SubstanceID="6C53212E-80CB-47B0-9CFC-F50B580DCABA"/>
+	<ActiveSubstance Name="Kryzantaspaza" SubstanceID="E53D6125-FE8A-4474-BCF8-71E4EB920FAB"/>
+	<ActiveSubstance Name="Kwas acetylosalicylowy" SubstanceID="7F0E06F6-64E5-4CA4-A172-6B6D01ACD4BE"/>
+	<ActiveSubstance Name="Kwas azelainowy" SubstanceID="E71AAFE8-2ED4-4616-B380-9A3A3DAE0230"/>
+	<ActiveSubstance Name="Kwas borowy" SubstanceID="FA5F2C53-F42E-43B6-AEF3-F407EDFA2EFA"/>
+	<ActiveSubstance Name="Kwas chenodeoksycholowy" SubstanceID="5AC96567-5C38-49B2-940F-7E410A0BCDA4"/>
+	<ActiveSubstance Name="Kwas cholowy" SubstanceID="6C928134-C5CF-45E4-8659-2CF6509DDDE5"/>
+	<ActiveSubstance Name="Kwas deoksycholowy" SubstanceID="1C9E7ED6-050E-4B5C-B8A0-F05810932008"/>
+	<ActiveSubstance Name="Kwas foliowy (witamina b9)" SubstanceID="D36EBD6A-89F8-44EC-9742-4984C3F60B3F"/>
+	<ActiveSubstance Name="Kwas fusydowy" SubstanceID="0A4B06F3-EB95-430B-8596-E028E90173FC"/>
+	<ActiveSubstance Name="Kwas gadoterynowy" SubstanceID="B4DF7E5C-A4A7-487E-8E9D-7F9247ED65A6"/>
+	<ActiveSubstance Name="Kwas ibandronowy" SubstanceID="3D405425-2426-4A27-AC0B-5BC3D51809BA"/>
+	<ActiveSubstance Name="Kwas kargluminowy" SubstanceID="24DAAF5E-3025-4CB4-A4D6-8CC22C9A39CE"/>
+	<ActiveSubstance Name="Kwas mefenamowy" SubstanceID="88D45009-3CEB-41AA-A212-925CB888CF31"/>
+	<ActiveSubstance Name="Kwas mlekowy" SubstanceID="99470F31-0821-43A4-9366-5426DEEF59C6"/>
+	<ActiveSubstance Name="Kwas mykofenolowy" SubstanceID="3B6A936B-5EC9-470E-9274-781246C7BA3F"/>
+	<ActiveSubstance Name="Kwas salicylowy" SubstanceID="D36FF3F8-6C43-4347-AB14-A52ED2B2FDE2"/>
+	<ActiveSubstance Name="Kwas tolfenamowy" SubstanceID="DA77C575-D62E-4DFE-8230-24E4660163BC"/>
+	<ActiveSubstance Name="Kwas traneksamowy" SubstanceID="8642D4E6-E1D5-4B87-912D-B2D58E46D831"/>
+	<ActiveSubstance Name="Kwas undecylenowy" SubstanceID="88E53CDB-4669-4808-B380-097393D7DD3C"/>
+	<ActiveSubstance Name="Kwas walproinowy" SubstanceID="313EAEDE-7BE3-4847-9902-46FC3BED49B7"/>
+	<ActiveSubstance Name="Kwas zoledronowy" SubstanceID="90C46582-264B-4391-8428-7E8B0D9FCBEB"/>
+	<ActiveSubstance Name="Kwetiapina" SubstanceID="6C0387ED-DA6E-4FEA-8909-5F363ACF68A4"/>
+	<ActiveSubstance Name="Lacydypina" SubstanceID="D06EA5A6-FFA9-4AC0-BF7C-7A936A5CADA7"/>
+	<ActiveSubstance Name="Laktuloza" SubstanceID="D1C7F452-E8DD-481C-B1B6-03D80E9FC145"/>
+	<ActiveSubstance Name="Lamiwudyna" SubstanceID="7FD158FE-4273-412E-95EA-14D3F2CE02A5"/>
+	<ActiveSubstance Name="Lamotrygina" SubstanceID="71AD7353-CF1B-4F31-BB46-8D8D89FF0CF3"/>
+	<ActiveSubstance Name="Lansoprazol" SubstanceID="6A2293A6-F26E-441F-92DD-B02BC6B336BC"/>
+	<ActiveSubstance Name="Lapatynib" SubstanceID="F4AB3FCC-6F82-46EB-84A6-1A59F27F6592"/>
+	<ActiveSubstance Name="Laronidaza" SubstanceID="D706DA11-AFC5-41F0-8052-72424AB47F1B"/>
+	<ActiveSubstance Name="Latanoprost" SubstanceID="967773B4-B217-4C84-97CF-3BB47DBE9ECD"/>
+	<ActiveSubstance Name="Ledipaswir" SubstanceID="883608BF-3454-4418-8E2C-822C87FFFCF7"/>
+	<ActiveSubstance Name="Leflunomid" SubstanceID="6570189C-0652-4FEC-91A4-D7A0855065E6"/>
+	<ActiveSubstance Name="Lenalidomid" SubstanceID="454574BE-B507-4D35-9ED8-C4ABA91BF719"/>
+	<ActiveSubstance Name="Lenwatynib" SubstanceID="B32BC1D5-3E1C-4FB0-81AA-BEBB738610C9"/>
+	<ActiveSubstance Name="Letrozol" SubstanceID="9DB6A75D-5C97-47FE-9916-B61272765ECE"/>
+	<ActiveSubstance Name="Lewetiracetam (lewetyracetam)" SubstanceID="C924E6F8-F4C2-4744-BA5E-BC21ABE2D3E7"/>
+	<ActiveSubstance Name="Lewodopa" SubstanceID="E5FEED70-AE33-42A7-9F82-8DCCEE9FD4BA"/>
+	<ActiveSubstance Name="Lewodropropizyna" SubstanceID="3B41C2A3-A767-4267-BA08-DB52E05B33FC"/>
+	<ActiveSubstance Name="Lewofloksacyna" SubstanceID="F2296FBF-4FD6-460C-BD5B-2C6914A915DA"/>
+	<ActiveSubstance Name="Lewomepromazyna" SubstanceID="77ED16E2-4192-4D6F-B763-C065396A051D"/>
+	<ActiveSubstance Name="Lewonorgestrel" SubstanceID="F5160368-1C78-4E2B-B8D4-870063111343"/>
+	<ActiveSubstance Name="Lezynurad" SubstanceID="B1EA6CEB-2C8E-402E-A88F-3517488FE6A4"/>
+	<ActiveSubstance Name="Lidokaina" SubstanceID="1047F86C-E202-4C47-AE81-EAEA78C438CE"/>
+	<ActiveSubstance Name="Liksysenatyd" SubstanceID="D8AF3ABB-2B24-4B31-B1B4-99683535B5A5"/>
+	<ActiveSubstance Name="Linagliptyna" SubstanceID="B88313AF-95D4-477C-BD92-8286BE2A9A27"/>
+	<ActiveSubstance Name="Linestrenol" SubstanceID="859F0D87-B97F-49A4-9F6F-771E8A25D2AC"/>
+	<ActiveSubstance Name="Linezolid" SubstanceID="2B803B58-9955-4666-B7C8-78D3E3CB1213"/>
+	<ActiveSubstance Name="Linkomycyna" SubstanceID="41B06D05-902F-45AA-8469-96B3D17EC182"/>
+	<ActiveSubstance Name="Liraglutyd" SubstanceID="6006F9DA-CB45-4C7A-9C0A-47477384AFB0"/>
+	<ActiveSubstance Name="Lizynopryl" SubstanceID="F6AFE2D0-1061-41CC-A208-341B82A1197F"/>
+	<ActiveSubstance Name="Loksapina" SubstanceID="D7D58CCD-CFB6-447B-8EE6-64E804B90094"/>
+	<ActiveSubstance Name="Lomitapid" SubstanceID="20235398-6D66-4BEB-AC2E-D9F36E52F103"/>
+	<ActiveSubstance Name="Lopinawir" SubstanceID="106C3818-32F9-4B46-AC32-ECE69100A05A"/>
+	<ActiveSubstance Name="Loratadyna" SubstanceID="F57712A3-3260-4275-94DD-A08C2A2A25F7"/>
+	<ActiveSubstance Name="Lorazepam" SubstanceID="D04E2C62-8A90-4994-9003-6EEF82604224"/>
+	<ActiveSubstance Name="Lornoksykam" SubstanceID="667FF695-1543-4174-912C-529E18C5F162"/>
+	<ActiveSubstance Name="Lowastatyna" SubstanceID="936FD6C1-FC8E-483A-8061-E9D693730DF7"/>
+	<ActiveSubstance Name="Ludzki czynnik krzepnięcia viii" SubstanceID="E56F45D1-36AA-48C3-945D-94BE5DA4BD05"/>
+	<ActiveSubstance Name="Lutropina alfa" SubstanceID="7CBC3FBA-EA27-41AA-A4F4-81BFDA6DF6DD"/>
+	<ActiveSubstance Name="Mannitol" SubstanceID="B8E73B5F-E2FD-43CF-A586-4C84360F04D3"/>
+	<ActiveSubstance Name="Mebendazol" SubstanceID="AC81F834-071E-47F2-921D-18E203934F39"/>
+	<ActiveSubstance Name="Mekasermina" SubstanceID="8A67E035-6734-449B-99B3-B6B7BD0608DF"/>
+	<ActiveSubstance Name="Melatonina" SubstanceID="3C0B54BC-6E51-4CB3-938A-112A15D5133F"/>
+	<ActiveSubstance Name="Meloksykam" SubstanceID="BCF38F05-8A44-4F29-9DD1-3DB00F60E386"/>
+	<ActiveSubstance Name="Mesalazyna" SubstanceID="CB61140F-3922-412A-86F3-E084FB3A54E2"/>
+	<ActiveSubstance Name="Mesna" SubstanceID="7A005587-E262-48E4-939C-D59E9BFE1363"/>
+	<ActiveSubstance Name="Metformina" SubstanceID="EAAEC746-E038-4168-AA5F-569A351DF070"/>
+	<ActiveSubstance Name="Metoksalen" SubstanceID="227FB388-AA78-44C1-A794-2B7CAB0EABF5"/>
+	<ActiveSubstance Name="Metotreksat" SubstanceID="799F4EB1-CA2E-4704-9B30-3989FC52DC51"/>
+	<ActiveSubstance Name="Metronidazol" SubstanceID="96063E2D-0D47-4A1E-A5E6-F46C13A4F751"/>
+	<ActiveSubstance Name="Metyldopa" SubstanceID="9642A25C-2D9B-4AD8-B057-989BF4C5B95C"/>
+	<ActiveSubstance Name="Metyloprednizolon" SubstanceID="E39E534A-66C3-4A4A-992F-DFC975CD9D81"/>
+	<ActiveSubstance Name="Metyrapon" SubstanceID="EFE207CA-585F-464F-9C5B-FC367550EB71"/>
+	<ActiveSubstance Name="Midazolam" SubstanceID="2AA8A1A4-CDF2-401A-90B2-999A1E6216D8"/>
+	<ActiveSubstance Name="Midodryna" SubstanceID="F0B4FFEA-DFED-4BE7-B7B5-3515C8877E5F"/>
+	<ActiveSubstance Name="Mifamurtyd" SubstanceID="92A9E7F3-C51E-47D0-8B7B-246CC863F78D"/>
+	<ActiveSubstance Name="Miglustat" SubstanceID="4EA29735-337A-4999-8049-D9AED4EE027C"/>
+	<ActiveSubstance Name="Mikonazol" SubstanceID="99A00485-BC9B-4BB7-8417-9B66F0239C27"/>
+	<ActiveSubstance Name="Milrinon" SubstanceID="534F687B-A56E-4553-911C-0F417DE7D1BE"/>
+	<ActiveSubstance Name="Minoksydyl" SubstanceID="DED50390-1893-45AB-AFDD-CA1A2F890D6E"/>
+	<ActiveSubstance Name="Mirabegron" SubstanceID="AC9073CA-7009-4ACB-AF20-A947D4983624"/>
+	<ActiveSubstance Name="Mirtazapina" SubstanceID="0C0C173E-E7B6-441C-854D-36866DE40017"/>
+	<ActiveSubstance Name="Mitoksantron" SubstanceID="EB89519E-F8CD-4432-8510-B1CA6FB870F3"/>
+	<ActiveSubstance Name="Mitotan" SubstanceID="3A2DBE9B-0C6B-483F-BEEA-279CE3FEB429"/>
+	<ActiveSubstance Name="Mizoprostol" SubstanceID="6EBF6949-C23F-4933-9F60-251568E0C77E"/>
+	<ActiveSubstance Name="Mocznik" SubstanceID="FC71DB3C-9DCF-49F5-B928-D0A5F000DD58"/>
+	<ActiveSubstance Name="Moklobemid" SubstanceID="9FF58D4E-52CF-405F-A728-6258E92457D9"/>
+	<ActiveSubstance Name="Moksonidyna" SubstanceID="284F85F0-5892-4F49-B7A5-EF84A83ACB36"/>
+	<ActiveSubstance Name="Moksyfloksacyna" SubstanceID="EC296101-D450-492B-B75B-34E3B7023426"/>
+	<ActiveSubstance Name="Monoazotan izosorbidu" SubstanceID="36A5A94C-67E6-40F0-A0A6-7E567C830A97"/>
+	<ActiveSubstance Name="Montelukast" SubstanceID="A3102539-028A-40C3-A3AB-309DC8E609AE"/>
+	<ActiveSubstance Name="Moroktokog alfa" SubstanceID="F0CAE87E-485C-426C-A4A6-CD1D0DD33A44"/>
+	<ActiveSubstance Name="Mukopolisacharydowy polisiarczan" SubstanceID="8B6B9EEB-8FBD-4F4B-9507-98AC7A0053DE"/>
+	<ActiveSubstance Name="Mupirocyna" SubstanceID="1DEACF8E-1D98-419F-AA34-F39DF360518D"/>
+	<ActiveSubstance Name="Mykafungina" SubstanceID="39969C65-D670-4C05-BF6C-5F09A5696FA4"/>
+	<ActiveSubstance Name="Nabumeton" SubstanceID="44F14F94-35CA-411B-B978-E9C282118F88"/>
+	<ActiveSubstance Name="Nadroparyna" SubstanceID="6FD649A6-2B5D-4410-93ED-23024EB48FCA"/>
+	<ActiveSubstance Name="Naproksen" SubstanceID="5AFCEEE7-4FC0-444A-A935-D69D7844FF6F"/>
+	<ActiveSubstance Name="Natalizumab" SubstanceID="721AB5EC-8455-4665-8445-D2A13EBE375F"/>
+	<ActiveSubstance Name="Natamycyna" SubstanceID="F8954B7C-D9A1-4809-A730-E25B1919E877"/>
+	<ActiveSubstance Name="Nebiwolol" SubstanceID="777A87CB-44C5-4A81-A4E5-3B61CD38C359"/>
+	<ActiveSubstance Name="Nelarabina" SubstanceID="7138B30C-11C6-4B6B-86AD-5E230E1C4501"/>
+	<ActiveSubstance Name="Neomycyna" SubstanceID="2F84A200-0D08-4993-9378-CE13936F11E8"/>
+	<ActiveSubstance Name="Nicergolina" SubstanceID="7E7C98DA-2EC6-4B1B-AA52-1DF4B12E224A"/>
+	<ActiveSubstance Name="Nifuratel" SubstanceID="CFF59C2A-4E0D-4FBA-AAC1-D5A2D5F8A958"/>
+	<ActiveSubstance Name="Nifuroksazyd" SubstanceID="DDA3A992-8CC9-4D90-A70E-5B3ABB50E09D"/>
+	<ActiveSubstance Name="Nikotyna" SubstanceID="B0D20D95-3E7D-470C-8190-BF8252FBC9B7"/>
+	<ActiveSubstance Name="Nilotynib" SubstanceID="50B25A39-E56F-4375-8FB8-44BECFA80D83"/>
+	<ActiveSubstance Name="Nimesulid" SubstanceID="37CB7F4F-B3C9-4D24-8FC3-20167C3D6507"/>
+	<ActiveSubstance Name="Nimodypina" SubstanceID="B9546136-9A8F-4232-B103-65926913E5B5"/>
+	<ActiveSubstance Name="Nitrazepam" SubstanceID="BBA99384-55A4-4EBB-9C83-1DBEA377782D"/>
+	<ActiveSubstance Name="Nitrendypina" SubstanceID="5FCA2EF0-6405-4E7A-A397-85D6C6C4A94D"/>
+	<ActiveSubstance Name="Nitroksolina" SubstanceID="8B53BD90-9488-4925-BB9C-C0650FA60930"/>
+	<ActiveSubstance Name="Nityzynon" SubstanceID="1FC398E7-464D-4CCA-B7AD-D48C333FE5DA"/>
+	<ActiveSubstance Name="Norfloksacyna" SubstanceID="1012A429-A568-4CB0-A126-C65117BB356A"/>
+	<ActiveSubstance Name="Norgestimat" SubstanceID="7B988FE4-839E-4EAC-971F-196BACF1C6AC"/>
+	<ActiveSubstance Name="Nystatyna" SubstanceID="1480DEB6-79EC-4CA3-9B54-314D429701E5"/>
+	<ActiveSubstance Name="Obinutuzumab" SubstanceID="39A71F2D-4708-4171-97F4-B4B391643681"/>
+	<ActiveSubstance Name="Ofatumumab" SubstanceID="2E6F9A28-B8C4-480F-A968-C1A0B284A564"/>
+	<ActiveSubstance Name="Ofloksacyna" SubstanceID="6BEAB3D2-CC49-42D7-861A-2CA2E31EED5B"/>
+	<ActiveSubstance Name="Okryplazmina" SubstanceID="215F42D3-8D8B-44DA-A1CC-FBCE9C739985"/>
+	<ActiveSubstance Name="Oksaliplatyna" SubstanceID="B0CA4162-75B5-40BE-8B9D-335B31331FDD"/>
+	<ActiveSubstance Name="Oksazepam" SubstanceID="11D232FE-273F-40A8-A291-96D5BD4CB57A"/>
+	<ActiveSubstance Name="Okskarbazepina" SubstanceID="A6BF532C-F0F7-4F41-8716-3BA373A5571F"/>
+	<ActiveSubstance Name="Oksytetracyklina" SubstanceID="7B9F77F9-817C-4348-A9EA-0AE671769FB9"/>
+	<ActiveSubstance Name="Oksytocyna" SubstanceID="CF234E22-25C7-4F74-95A8-9B89EF7BB897"/>
+	<ActiveSubstance Name="Olanzapina" SubstanceID="CE013DF8-5E43-4FA2-BBB3-8A70D597B5F7"/>
+	<ActiveSubstance Name="Olopatadyna" SubstanceID="F5DE79A3-A25D-494A-9951-564A77D72F62"/>
+	<ActiveSubstance Name="Omalizumab" SubstanceID="4F6807AB-C263-4AE2-AA01-7B7D04BC3655"/>
+	<ActiveSubstance Name="Omeprazol" SubstanceID="8C67E40F-D8DE-4F61-ABB8-D2163D661BFC"/>
+	<ActiveSubstance Name="Ondansetron" SubstanceID="C5C5F149-7492-4579-9A5C-FB764F3DB6A6"/>
+	<ActiveSubstance Name="Orlistat" SubstanceID="A7C2FA66-0D3F-4777-BB0F-6957B1B6E668"/>
+	<ActiveSubstance Name="Oseltamiwir" SubstanceID="ACFD44EB-4BFC-42FE-8E7D-411F7D70E54A"/>
+	<ActiveSubstance Name="Ospemifen" SubstanceID="ADE14FFE-0553-47B0-8D76-6DEA28D3F5C2"/>
+	<ActiveSubstance Name="Ozymertynib" SubstanceID="32B062DA-0FC5-4FD9-8277-6451F2E72EDA"/>
+	<ActiveSubstance Name="Paklitaksel" SubstanceID="1865B153-B27F-48D9-BD22-710AEBF94D26"/>
+	<ActiveSubstance Name="Paliperydon" SubstanceID="440B3218-B309-42F9-AEB7-0DA4EA8800D6"/>
+	<ActiveSubstance Name="Panitumumab" SubstanceID="18C921BA-1EF0-40E8-A466-47A06DA71EAB"/>
+	<ActiveSubstance Name="Pankreatyna" SubstanceID="41EA0FDA-C4B5-4B08-AAB5-6C9842D0DAB7"/>
+	<ActiveSubstance Name="Panobinostat" SubstanceID="DED0BF82-E2E4-4158-AB4D-77938501E1F0"/>
+	<ActiveSubstance Name="Pantoprazol" SubstanceID="52BA26B0-E120-4F30-BCD3-A0B422943DB2"/>
+	<ActiveSubstance Name="Paracetamol" SubstanceID="97813D1A-DAD6-4107-8930-29EDD1BCF5D7"/>
+	<ActiveSubstance Name="Parafina ciekła" SubstanceID="8BB4EB51-52E2-419B-B583-96728F138265"/>
+	<ActiveSubstance Name="Paroksetyna" SubstanceID="634454C9-EBD0-4429-A88A-D2BEFAB3B438"/>
+	<ActiveSubstance Name="Pazyreotyd" SubstanceID="32351BC2-0CAF-4E41-AAF0-EEFC07B05202"/>
+	<ActiveSubstance Name="Pegaspargaza" SubstanceID="FD3866E0-7D4D-4F0E-8FB7-2C7AC0D2C475"/>
+	<ActiveSubstance Name="Pegwisomant" SubstanceID="69833846-28E3-475B-9DFB-2CE9C2C6EAF8"/>
+	<ActiveSubstance Name="Pembrolizumab" SubstanceID="0C86573D-D93E-43CC-83DE-CB6E544452EC"/>
+	<ActiveSubstance Name="Pemetreksed" SubstanceID="2C883282-6EDD-4517-A7E8-E4FA5C4418BB"/>
+	<ActiveSubstance Name="Pentoksyfilina" SubstanceID="743E4F24-B603-4C7D-AC1B-D2C96DC8B5D9"/>
+	<ActiveSubstance Name="Perampanel" SubstanceID="9FF7C922-87F9-440F-B760-CB09DAD7AD9C"/>
+	<ActiveSubstance Name="Perflutren" SubstanceID="4D10FD06-F284-4580-A506-6B4D1B494C00"/>
+	<ActiveSubstance Name="Permetryna" SubstanceID="6A7A27E5-4925-4EF6-9928-60298B7276FD"/>
+	<ActiveSubstance Name="Peryndopryl" SubstanceID="87C6E0E8-7756-4B11-979F-16A0DB214AF0"/>
+	<ActiveSubstance Name="Petruzumab" SubstanceID="FA39D7CC-9D63-4188-8EEC-9818B3B8DF91"/>
+	<ActiveSubstance Name="Pioglitazon" SubstanceID="1F1B7B3B-4AF5-404E-B0C2-0F58B56D7C66"/>
+	<ActiveSubstance Name="Piperacylina" SubstanceID="C06519DF-4527-4B79-8FA6-7745B37051B0"/>
+	<ActiveSubstance Name="Piracetam" SubstanceID="17270544-BFD7-4290-ABF5-455203657D0E"/>
+	<ActiveSubstance Name="Piroksykam" SubstanceID="05BFC411-B7E9-46FE-AA22-E085C01B319A"/>
+	<ActiveSubstance Name="Pitolisant" SubstanceID="CFEC6C02-5BDF-4486-B362-0E38BAACFDDF"/>
+	<ActiveSubstance Name="Podofilotoksyna" SubstanceID="D9544CF7-F5AD-4B70-B1BC-494FA917AF71"/>
+	<ActiveSubstance Name="Podtlenku azotu" SubstanceID="50421122-CA91-4CAB-93D9-DA42A05BEF7A"/>
+	<ActiveSubstance Name="Polikrezulen" SubstanceID="4F2DF7DC-0C97-46DA-95CE-B4D483213455"/>
+	<ActiveSubstance Name="Pozakonazol" SubstanceID="3643FC1D-FE82-411A-A314-7A50717996B3"/>
+	<ActiveSubstance Name="Pramipeksol" SubstanceID="604E14E2-2CA0-43CE-99D5-543CB65EE139"/>
+	<ActiveSubstance Name="Pranoprofen" SubstanceID="2A14FAD8-D471-49B7-A27E-D97794223FBE"/>
+	<ActiveSubstance Name="Prasugrel" SubstanceID="2C1C6E5F-ECE9-4FD2-83C2-9DE48C2D64EC"/>
+	<ActiveSubstance Name="Prawastatyna" SubstanceID="12F3AA47-BDBC-458B-9C5C-8BB30458080F"/>
+	<ActiveSubstance Name="Prednizolon" SubstanceID="C9416332-0035-4694-93CD-DB8B52531AF4"/>
+	<ActiveSubstance Name="Prednizon" SubstanceID="BD35ADDC-9012-4A34-A7B4-106ED3911DB6"/>
+	<ActiveSubstance Name="Pregabalina" SubstanceID="C387679B-3FB1-4CE3-9684-AA6055B69800"/>
+	<ActiveSubstance Name="Pridinol" SubstanceID="A1E07553-9E67-4E7A-8BE8-4E770285B467"/>
+	<ActiveSubstance Name="Prilokaina (prylokaina)" SubstanceID="ACA8759B-6F63-46ED-B61A-1C21CD6A276F"/>
+	<ActiveSubstance Name="Progesteron" SubstanceID="D90696EF-D35E-4616-9424-C43B2B24E693"/>
+	<ActiveSubstance Name="Propofol" SubstanceID="4B19D4AD-FA10-48C5-A99E-3A98E45AB24D"/>
+	<ActiveSubstance Name="Propyltiouracyl" SubstanceID="6AB3DC12-10FE-4EB3-A045-92F298902814"/>
+	<ActiveSubstance Name="Proteinianobursztynian żelaza" SubstanceID="FDA640BD-3ABE-498D-98E7-CC8512F138B4"/>
+	<ActiveSubstance Name="Pyrantel" SubstanceID="3FC8F11D-A184-4285-9D66-DEDE318DAA6C"/>
+	<ActiveSubstance Name="Racekadotryl" SubstanceID="DD784D59-057E-46C6-9803-9759A5A7EB22"/>
+	<ActiveSubstance Name="Ramipryl" SubstanceID="1E861C40-C362-4600-865F-924DC55CA325"/>
+	<ActiveSubstance Name="Ranibizumab" SubstanceID="CCC4824D-B7FF-42EB-87FD-CD10C0BA1CC4"/>
+	<ActiveSubstance Name="Ranitydyna" SubstanceID="61801180-4001-4DDC-B800-32CC38E020F6"/>
+	<ActiveSubstance Name="Ranolazyna" SubstanceID="62F084AC-0220-4F3B-BB5B-47BC0ED4DFD9"/>
+	<ActiveSubstance Name="Rasagilina" SubstanceID="B249D826-223B-433E-B9F4-73EDCD597C18"/>
+	<ActiveSubstance Name="Rasburykaza" SubstanceID="62661CC5-8C90-4745-ACAC-C838895DABCA"/>
+	<ActiveSubstance Name="Reboksetyna" SubstanceID="028C6660-D595-4F45-B5D5-404062468285"/>
+	<ActiveSubstance Name="Regorafenib" SubstanceID="42A35245-63B8-4E28-ADFF-471CB5ACA333"/>
+	<ActiveSubstance Name="Reteplaza" SubstanceID="0E4D8A20-D4F6-44D2-97A2-AF32BE898D7F"/>
+	<ActiveSubstance Name="Riluzol" SubstanceID="23B823FB-C0E5-4E52-BF39-64D790BCC21B"/>
+	<ActiveSubstance Name="Riociguat" SubstanceID="420132EB-31E5-40EB-A4A6-0B341B2B4B29"/>
+	<ActiveSubstance Name="Roflumilast" SubstanceID="830C933D-17BA-41B8-80C0-C7412349F8A7"/>
+	<ActiveSubstance Name="Roksytromycyna" SubstanceID="01A92706-9260-47D6-A4DE-EC404F276175"/>
+	<ActiveSubstance Name="Rolapitant" SubstanceID="A5D096D8-6301-41F4-B29A-67934C93D866"/>
+	<ActiveSubstance Name="Ropinirol" SubstanceID="51D309A1-2E64-4EDC-8E4F-4FA1DBD2C8BA"/>
+	<ActiveSubstance Name="Rosuwastatyna" SubstanceID="25A934C3-0B68-466F-BCDA-1FF5739C221F"/>
+	<ActiveSubstance Name="Rotygotyna" SubstanceID="047F734E-A777-4BA6-BE4E-7DFEF449FD55"/>
+	<ActiveSubstance Name="Rufinamid" SubstanceID="FA1CC98E-6DFB-4238-89CE-37434E5AAFEB"/>
+	<ActiveSubstance Name="Ruksolitynib" SubstanceID="E19A3D54-D68F-4D21-A6FB-CC23D57858ED"/>
+	<ActiveSubstance Name="Rupatadyna" SubstanceID="F6D33E2B-CE3D-4B40-BD73-90795FA8C7CE"/>
+	<ActiveSubstance Name="Rybawiryna" SubstanceID="BAE059C8-12C6-46AF-9BA4-75BF5F89E005"/>
+	<ActiveSubstance Name="Rybocyklib" SubstanceID="A5D096D8-6301-41F4-B29A-67934C93D866"/>
+	<ActiveSubstance Name="Rylmenidyna" SubstanceID="AEBD6F58-7E5E-43A1-B720-700DFBCFF704"/>
+	<ActiveSubstance Name="Rysperydon" SubstanceID="E97B2B7F-9260-42C3-A414-77936E849E59"/>
+	<ActiveSubstance Name="Rytonawir" SubstanceID="3BACE2DB-64A2-47AD-B16B-53998725BD81"/>
+	<ActiveSubstance Name="Rytuksymab" SubstanceID="9502551F-B5A8-4785-8766-7642654CF014"/>
+	<ActiveSubstance Name="Rywaroksaban" SubstanceID="CBAA9832-A25A-46AC-B359-20294D7738EF"/>
+	<ActiveSubstance Name="Rywastygmina" SubstanceID="9B70F799-C14B-4840-BCD2-A1D71842259B"/>
+	<ActiveSubstance Name="Saksagliptyna" SubstanceID="2D25F2A5-521E-4600-BB60-6B73549D3C37"/>
+	<ActiveSubstance Name="Sakubitryl" SubstanceID="9BC7677E-091B-4E91-87A9-DBAA910BF668"/>
+	<ActiveSubstance Name="Sakwinawir" SubstanceID="04E72D84-2DBE-4C88-8899-E27F0A9C7833"/>
+	<ActiveSubstance Name="Salbutamol" SubstanceID="B47DFDB7-7A43-487F-A9F2-CB498C6D932E"/>
+	<ActiveSubstance Name="Salicylan choliny" SubstanceID="6354EED4-9AC1-4CE6-BB69-03E2113BEF7E"/>
+	<ActiveSubstance Name="Salicylan dietyloaminy" SubstanceID="928B3979-861F-4B82-B81B-D2B6B023E373"/>
+	<ActiveSubstance Name="Salmeterol" SubstanceID="1EB216DE-C351-4F43-B31C-34A16DBDD4CF"/>
+	<ActiveSubstance Name="Sertindol" SubstanceID="B3FCD721-DFFD-4A60-A537-3A4AB7C11A2D"/>
+	<ActiveSubstance Name="Sertralina" SubstanceID="4F022E29-C5D6-4BDB-BA02-65869BE7CFD3"/>
+	<ActiveSubstance Name="Sewelamer" SubstanceID="A573F5A4-9BE9-4158-96DF-7752A6319FFC"/>
+	<ActiveSubstance Name="Sewofluran" SubstanceID="3A13819B-5CC3-40AC-8B8C-C6BADADBB408"/>
+	<ActiveSubstance Name="Siarczan żelaza" SubstanceID="E0C119E2-5F6E-434A-8E10-D049D4972347"/>
+	<ActiveSubstance Name="Sildenafil" SubstanceID="D7B1BC8D-C4F7-4A55-9CE4-64B2F11AD2C7"/>
+	<ActiveSubstance Name="Simwastatyna" SubstanceID="1F241AE3-B068-4101-8AA1-83A26574B312"/>
+	<ActiveSubstance Name="Sitagliptyna" SubstanceID="6F6B7223-5B6F-42F4-AE56-AC7A0FBF99D1"/>
+	<ActiveSubstance Name="Sofosbuwir" SubstanceID="6871E254-443A-4786-92FA-E4248696933E"/>
+	<ActiveSubstance Name="Somatostatyna" SubstanceID="30B9D35A-CF04-4B5E-80DE-A574EE943A04"/>
+	<ActiveSubstance Name="Somatropina" SubstanceID="B6CC237E-8577-4DAD-A5C0-B493AB5C74E1"/>
+	<ActiveSubstance Name="Sorafenib" SubstanceID="8EF5E148-E077-4C23-8EE7-A25A11DD5325"/>
+	<ActiveSubstance Name="Spiramycyna" SubstanceID="12CD2515-E9BC-4D9C-81F6-2C91AE8F297E"/>
+	<ActiveSubstance Name="Spironolakton" SubstanceID="ED7AABE1-663A-47C1-8601-F020373C3AD6"/>
+	<ActiveSubstance Name="Suksametonium" SubstanceID="EB3041A8-9850-4C1D-9351-74631C51CB73"/>
+	<ActiveSubstance Name="Sulfatiazol srebra" SubstanceID="36339644-598D-4435-96E8-4A34A08FF650"/>
+	<ActiveSubstance Name="Sulodeksyd" SubstanceID="82AD1A78-E5D2-4D14-A58C-C3270E1ECC77"/>
+	<ActiveSubstance Name="Sumatryptan" SubstanceID="EFA349D3-83F0-4FBA-90A7-95F612997DC1"/>
+	<ActiveSubstance Name="Sunitynib" SubstanceID="14624F39-F0DE-43BC-B97D-B6DE73F48041"/>
+	<ActiveSubstance Name="Sylodosyna" SubstanceID="EBC0E7E7-F7F6-4779-921F-17ED6ABD46EC"/>
+	<ActiveSubstance Name="Symetykon" SubstanceID="8719BDE1-DFD7-4BA8-AE8C-CC920EC92B79"/>
+	<ActiveSubstance Name="Syrolimus" SubstanceID="A1F8C733-1E77-4368-B373-76C3565C42B0"/>
+	<ActiveSubstance Name="Tadalafil" SubstanceID="5814523C-4B67-4EB4-B48F-30DF96F2F397"/>
+	<ActiveSubstance Name="Tafluprost" SubstanceID="7F779D4F-A5EF-4AE5-B60C-8B065DD1DB18"/>
+	<ActiveSubstance Name="Tapentadol" SubstanceID="7F8024B4-8EEA-4C2B-9C08-5985238493DD"/>
+	<ActiveSubstance Name="Tegafur" SubstanceID="6DBD5FC5-B720-4BF4-8740-BDE31E83A47A"/>
+	<ActiveSubstance Name="Teikoplanina" SubstanceID="0AE74C7D-ABFF-406D-A286-C525D1D8CBBD"/>
+	<ActiveSubstance Name="Telmisartan" SubstanceID="2C07515C-55D6-4370-8948-B29AC13F0232"/>
+	<ActiveSubstance Name="Temazepam" SubstanceID="A82EEF93-B9EE-4B2B-B056-2F5F50AF6A81"/>
+	<ActiveSubstance Name="Temozolomid" SubstanceID="CD76C613-77E6-4E0E-9AC5-0D9191FA88DA"/>
+	<ActiveSubstance Name="Temsyrolimus" SubstanceID="F0F8A2D7-00A7-405C-8AB0-E5C443A5B17C"/>
+	<ActiveSubstance Name="Teofilina" SubstanceID="F04BE690-279E-4B1A-90EB-50FDE9BC5B71"/>
+	<ActiveSubstance Name="Terazosyna" SubstanceID="2A75B34E-9016-4456-9901-F6FA48A2E150"/>
+	<ActiveSubstance Name="Terbinafina" SubstanceID="6ACFB028-2B4A-4959-8489-5CCCB7289577"/>
+	<ActiveSubstance Name="Teryflunomid" SubstanceID="15A8B419-2D22-4808-9742-E7C61BB21805"/>
+	<ActiveSubstance Name="Teryparatyd" SubstanceID="F3ACC913-739B-4910-A57E-6DE78D4926C2"/>
+	<ActiveSubstance Name="Testosteron" SubstanceID="26DF8502-1506-4B72-9AC8-DDF7DE3A4123"/>
+	<ActiveSubstance Name="Tetrabenazyna" SubstanceID="6D046724-144B-4A20-90B1-46F30C673A47"/>
+	<ActiveSubstance Name="Tiamazol" SubstanceID="61C6336C-83B1-4E28-A6BC-C67057F3189F"/>
+	<ActiveSubstance Name="Tianeptyna" SubstanceID="E3D6DD3F-CA04-490A-9148-1657EFD8D0A1"/>
+	<ActiveSubstance Name="Tiapryd" SubstanceID="1C613DBA-3379-48FC-93DE-BC18CE42C006"/>
+	<ActiveSubstance Name="Tibolon" SubstanceID="9A021B99-FC0B-4490-A5BE-40500F256DAB"/>
+	<ActiveSubstance Name="Tikagrelor" SubstanceID="4C85F213-58CC-4C26-AA20-31D613623B6D"/>
+	<ActiveSubstance Name="Tiokolchikozyd" SubstanceID="1CE1A89E-4896-46C3-B14F-D6381FD3A308"/>
+	<ActiveSubstance Name="Tiotepa" SubstanceID="B54A3E92-4CAB-42B7-AE48-83A9DF7454C5"/>
+	<ActiveSubstance Name="Tlen" SubstanceID="17BE9A56-C35B-42DC-918D-E79F432FC8AB"/>
+	<ActiveSubstance Name="Tlenek cynku" SubstanceID="99D17B35-666E-4933-80D8-0F02F04C786E"/>
+	<ActiveSubstance Name="Tobramycyna" SubstanceID="DF6D37C1-ED96-45CC-A3F0-22BE27AB752D"/>
+	<ActiveSubstance Name="Toclizumab" SubstanceID="D77BE0CE-0A9C-4A50-8FFC-932EB5363BA2"/>
+	<ActiveSubstance Name="Tokofersolan" SubstanceID="8F78DF2B-01E0-4244-9068-6CC73E2D56AB"/>
+	<ActiveSubstance Name="Tolterodyna" SubstanceID="057BAFBF-12FF-4A2C-942F-BAD11CEE6470"/>
+	<ActiveSubstance Name="Topiramat" SubstanceID="82E43422-D5AC-4BD5-8DB5-2E8C8D2B65D5"/>
+	<ActiveSubstance Name="Topotekan" SubstanceID="695DEB99-0AE6-4B62-9AB7-01AEF0D607BB"/>
+	<ActiveSubstance Name="Torasemid" SubstanceID="9A1DB603-7D57-465B-9B4E-9A88151BD275"/>
+	<ActiveSubstance Name="Toremifen" SubstanceID="A38CC90F-20D6-411B-A6E0-A7D5C4EAF2FD"/>
+	<ActiveSubstance Name="Trabektedyna" SubstanceID="BDE818E8-B72F-4D57-8CC2-F2F1129088F8"/>
+	<ActiveSubstance Name="Trametynib" SubstanceID="F57EE723-E8AA-4A7B-913C-38637AB5908C"/>
+	<ActiveSubstance Name="Trandolapryl" SubstanceID="9E39C645-31BB-4F9A-9E8D-887F1B633EB1"/>
+	<ActiveSubstance Name="Trastuzumab" SubstanceID="432778BC-DAD6-4086-851D-2D1B0E3717EF"/>
+	<ActiveSubstance Name="Trawoprost" SubstanceID="1FA567E0-F7C6-4B88-80AE-5B39C402F49E"/>
+	<ActiveSubstance Name="Treprostinil" SubstanceID="9EE176E1-A0C6-48A9-B4E2-CA22E31125A3"/>
+	<ActiveSubstance Name="Tretinoina" SubstanceID="CC8BA7FA-2966-4C5A-9301-5239FF9EFA4E"/>
+	<ActiveSubstance Name="Triamcynolon" SubstanceID="5B119004-D21B-41D8-8530-38D8F722F1BA"/>
+	<ActiveSubstance Name="Tribenozyd" SubstanceID="7D5D4088-6F88-4F4B-B88B-22B7BCA79EAF"/>
+	<ActiveSubstance Name="Trifaroten" SubstanceID="E88E5488-4AA6-42EA-85D1-197CF4E49E17"/>
+	<ActiveSubstance Name="Trimebutyna" SubstanceID="A3080C7B-A542-491B-BD38-942FDC87DE55"/>
+	<ActiveSubstance Name="Trimetoprim" SubstanceID="071BBD3E-97D4-42AA-AD9B-BFEC23846E6A"/>
+	<ActiveSubstance Name="Triptorelina" SubstanceID="040F2E64-AA39-439D-A384-0BBF23B4EFDD"/>
+	<ActiveSubstance Name="Tritlenek diarsenu" SubstanceID="77BDD32D-AA9C-413D-BE45-A93E2C2943D6"/>
+	<ActiveSubstance Name="Trokserutyna" SubstanceID="E0313D8F-035B-4025-9F56-4BD09D8B1CE4"/>
+	<ActiveSubstance Name="Tygecyklina" SubstanceID="37BA99BD-15F2-4BAB-84D0-F5CFECA9FD35"/>
+	<ActiveSubstance Name="Tymolol" SubstanceID="E348C473-9B90-408B-BAA6-B1414E67E40C"/>
+	<ActiveSubstance Name="Tymonacyk" SubstanceID="2BB1D549-2597-42A4-95C1-08539E417FEC"/>
+	<ActiveSubstance Name="Tyzanidyna" SubstanceID="7B49ED2F-ABB9-400C-844F-00BD65EBFB43"/>
+	<ActiveSubstance Name="Urapidyl" SubstanceID="7BC19CCE-7F83-4823-A3F5-90BB826E6E51"/>
+	<ActiveSubstance Name="Walgancyklowir" SubstanceID="8D4451E4-035A-4F3B-95CB-96A618560207"/>
+	<ActiveSubstance Name="Walsartan" SubstanceID="31299D7A-F1BD-4104-839C-753C48BF40FF"/>
+	<ActiveSubstance Name="Wardenafil" SubstanceID="96315EC9-4013-40A3-AACC-7A690FF0F760"/>
+	<ActiveSubstance Name="Wedolizumab" SubstanceID="29D94918-9A4B-4AD5-B345-5455F46A5EA3"/>
+	<ActiveSubstance Name="Welpataswir" SubstanceID="7FD1FAFF-79D4-4A8A-B8FF-3898D05FA636"/>
+	<ActiveSubstance Name="Wemurafenib" SubstanceID="FA2C5022-64B4-418F-A24A-39FD87BFA35B"/>
+	<ActiveSubstance Name="Wenlafaksyna" SubstanceID="88A15202-5F59-4FB6-9FA9-E128A3BF6E22"/>
+	<ActiveSubstance Name="Węglan litu" SubstanceID="88D34553-C009-4050-91CF-0651EF08DBEB"/>
+	<ActiveSubstance Name="Wildagliptyna" SubstanceID="05D60307-73D9-436B-8E6D-27CD9A9DBF6A"/>
+	<ActiveSubstance Name="Winorelbina" SubstanceID="4C4566E8-6A09-42F6-977E-2FC36DF6D6DE"/>
+	<ActiveSubstance Name="Winpocetyna" SubstanceID="41B9778E-BAE7-48A2-A128-F2522752F688"/>
+	<ActiveSubstance Name="Wismodegib" SubstanceID="F4D51CDE-C72D-4D16-A946-0F68B26B908D"/>
+	<ActiveSubstance Name="Witamina b12 (cyjanokobalamina)" SubstanceID="A940DD8C-5944-465C-A001-3BDE482080D6"/>
+	<ActiveSubstance Name="Witamina c (kwas askorbinowy)" SubstanceID="457FE031-6AA1-4B30-917F-5349F0C77DA4"/>
+	<ActiveSubstance Name="Witamina d (cholekalcyferol)" SubstanceID="D4D628E1-6B92-44F9-BC41-A8CA7678D604"/>
+	<ActiveSubstance Name="Witamina k1 (fitomenadion)" SubstanceID="93C0FEE9-39D5-4AB0-B334-F271C7FD8E46"/>
+	<ActiveSubstance Name="Worapaksar" SubstanceID="A5D096D8-6301-41F4-B29A-67934C93D866"/>
+	<ActiveSubstance Name="Worykonazol" SubstanceID="383F9479-BE9F-4446-AAA5-2CCBBE59EE3E"/>
+	<ActiveSubstance Name="Zaleplon" SubstanceID="4C024FB2-23C6-4581-B47B-10083FF5D97E"/>
+	<ActiveSubstance Name="Zasadowy galusan bizmutawy (dermatol)" SubstanceID="7174AA53-5E77-4C20-9C78-07F032070D7D"/>
+	<ActiveSubstance Name="Zolmitriptan" SubstanceID="A759948E-2047-4A5A-AEF3-795C781E64C1"/>
+	<ActiveSubstance Name="Zonisamid" SubstanceID="0D96F60D-5194-43EC-89AD-85B4F515A88C"/>
+	<ActiveSubstance Name="Zopiklon" SubstanceID="571D611B-01CB-4560-89B9-211471E4E87A"/>
+	<ActiveSubstance Name="Zyprazydon" SubstanceID="12DBF63E-2E65-4D77-BA4D-DB2EC433C927"/>
+</Translations>

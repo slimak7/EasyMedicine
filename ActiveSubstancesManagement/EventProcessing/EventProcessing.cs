@@ -1,4 +1,5 @@
 ﻿using ActiveSubstancesManagement.Dtos;
+using ActiveSubstancesManagement.Helpers;
 using System.Text.Json;
 
 namespace ActiveSubstancesManagement.EventProcessing
@@ -21,7 +22,20 @@ namespace ActiveSubstancesManagement.EventProcessing
 
                 case EventType.LeafletAdded:
 
-                    //TODO: leaflet processing here
+                    var item = JsonSerializer.Deserialize<LeafletAddedDto>(message);
+
+                    if (item == null)
+                    {
+                        Console.WriteLine("Leaflet is null!!");
+                        return;
+                    }
+
+                    var interactions = LeafletProcessing.GetInteractedSubstances(item);
+
+                    foreach (var interaction in interactions)
+                    {
+
+                    }
 
                     break;
             }

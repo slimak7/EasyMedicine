@@ -1,9 +1,9 @@
 ﻿namespace ActiveSubstancesManagement.Dtos
 {
-    public class LifleatAddedDto
+    public class LeafletAddedDto
     {
         public Guid MedicineID { get; set; }
-        public IFormFile Leaflet { get; set; }
+        public byte[] Leaflet { get; set; }
         public string EventName { get; set; }
     }
 }
