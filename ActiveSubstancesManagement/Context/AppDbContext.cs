@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ActiveSubstancesManagement.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ActiveSubstancesManagement.Context
 {
@@ -7,6 +8,9 @@ namespace ActiveSubstancesManagement.Context
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
+
+        public virtual DbSet<Interaction> Interactions { get; set; }
+        public virtual DbSet<InteractionLevel> InteractionsLevel { get; set; }
     }
 
 

@@ -1,6 +1,7 @@
 ﻿using ActiveSubstancesManagement.AsyncDataServices;
 using ActiveSubstancesManagement.Context;
 using ActiveSubstancesManagement.EventProcessing;
+using ActiveSubstancesManagement.Repos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -45,6 +46,7 @@ namespace ActiveSubstancesManagement
 
             services.AddSingleton<IEventProcessing, EventProcessing.EventProcessing>();
             services.AddHostedService<MessageBusClient>();
+            services.AddScoped<IInteractionsRepo, InteractionsRepo>();
         }
 
         /// <summary>
