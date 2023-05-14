@@ -18,6 +18,11 @@ namespace ActiveSubstancesManagement.Helpers
                 translationString = reader.ReadToEnd();
             }
 
+            var leafletPages = document.GetPages().Select(x => x.Text).ToList();
+
+            string leafletText = leafletPages.Aggregate((x,y) => x + "\n" + y);
+
+
             throw new NotImplementedException();
         }
     }
