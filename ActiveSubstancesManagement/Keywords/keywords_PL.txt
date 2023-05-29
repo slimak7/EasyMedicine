@@ -1,0 +1,9 @@
+nie wolno, 1
+może nasilić, 2
+nie zaleca się, 2
+należy zachować szczególną ostrożność, 2
+zwiększa ryzyko, 2
+należy powiedzieć lekarzowi, 3
+jednoczesne stosowanie, 2
+Pacjenci przyjmujący jednocześnie, 2
+może zmniejszyć działanie, 2
