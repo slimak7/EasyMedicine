@@ -1,5 +1,7 @@
 ﻿using ActiveSubstancesManagement.Dtos;
 using ActiveSubstancesManagement.Helpers;
+using ActiveSubstancesManagement.Models;
+using ActiveSubstancesManagement.Repos;
 using System.Text.Json;
 
 namespace ActiveSubstancesManagement.EventProcessing
@@ -12,7 +14,7 @@ namespace ActiveSubstancesManagement.EventProcessing
         {
             _scopeFactory = scopeFactory;
         }
-        public void ProcessEvent(string message)
+        public async void ProcessEvent(string message)
         {
             var eType = DetermineEvent(message);
 
@@ -32,9 +34,33 @@ namespace ActiveSubstancesManagement.EventProcessing
 
                     var interactions = LeafletProcessing.GetInteractedSubstances(item);
 
-                    foreach (var interaction in interactions)
+                    using (var scope = _scopeFactory.CreateScope())
                     {
+                        var interactionsRepo = scope.ServiceProvider.GetRequiredService<IInteractionsRepo>();
+                        var interactionsLevelsRepo = scope.ServiceProvider.GetRequiredService<IInteractionsLevelsRepo>();
 
+                        var currentInteractions = await interactionsRepo.GetAllByCondition(x => x.MedicineID == item.MedicineID);
+
+                        if (currentInteractions.Any())
+                        {
+                            foreach (var i in currentInteractions)
+                            {
+                                await interactionsRepo.Delete(i.InteractionID);
+                            }
+                        }
+
+                        var interactionsLevels = await interactionsLevelsRepo.GetAll();
+
+                        foreach (var interaction in interactions)
+                        {
+                            await interactionsRepo.Add(new Interaction()
+                            {
+                                InteractionID = new Guid(),
+                                MedicineID = item.MedicineID,
+                                InteractedSubstanceID = interaction.substanceID,
+                                InteractionLevel = interactionsLevels[interaction.interactionLevel - 1]
+                            });
+                        }
                     }
 
                     break;

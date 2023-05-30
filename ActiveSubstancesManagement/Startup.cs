@@ -2,6 +2,7 @@
 using ActiveSubstancesManagement.Context;
 using ActiveSubstancesManagement.EventProcessing;
 using ActiveSubstancesManagement.Repos;
+using ActiveSubstancesManagement.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -47,6 +48,8 @@ namespace ActiveSubstancesManagement
             services.AddSingleton<IEventProcessing, EventProcessing.EventProcessing>();
             services.AddHostedService<MessageBusClient>();
             services.AddScoped<IInteractionsRepo, InteractionsRepo>();
+            services.AddScoped<IInteractionsLevelsRepo, InteractionsLevelsRepo>();
+            services.AddScoped<IInteractionsService, InteractionsService>();
         }
 
         /// <summary>

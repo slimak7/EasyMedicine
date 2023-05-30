@@ -10,7 +10,7 @@ namespace ActiveSubstancesManagement.Context
         }
 
         public virtual DbSet<Interaction> Interactions { get; set; }
-        public virtual DbSet<InteractionLevel> InteractionsLevel { get; set; }
+        public virtual DbSet<InteractionLevel> InteractionsLevels { get; set; }
     }
 
 

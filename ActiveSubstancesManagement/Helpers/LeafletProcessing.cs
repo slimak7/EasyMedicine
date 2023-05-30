@@ -1,4 +1,5 @@
 ﻿using ActiveSubstancesManagement.Dtos;
+using System;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Xml;
@@ -7,7 +8,7 @@ namespace ActiveSubstancesManagement.Helpers
 {
     public static class LeafletProcessing
     {
-        public static List<(Guid substanceID, int interactionLevelID)> GetInteractedSubstances(LeafletAddedDto leaflet)
+        public static List<(Guid substanceID, int interactionLevel)> GetInteractedSubstances(LeafletAddedDto leaflet)
         {
             List<(Guid substanceID, int interactionLevelID)> interactions = new List<(Guid substanceID, int interactionLevelID)>();
 
@@ -54,9 +55,10 @@ namespace ActiveSubstancesManagement.Helpers
                     if (reader.IsStartElement() && reader.Name == "ActiveSubstance")
                     {
                         string name = reader.GetAttribute("Name");
-                        string Guid = reader.GetAttribute("SubstanceID");
+                        string guid = reader.GetAttribute("SubstanceID");
 
-                        translationPairs.Add(name, Guid);
+                        translationPairs.Add(name, guid);
+                        
                     }                  
                 }
             }
@@ -75,7 +77,10 @@ namespace ActiveSubstancesManagement.Helpers
 
                             if (regex.IsMatch(sentence))
                             {
-                                interactions.Add((new Guid(pair.Value), keyword.level));
+                                if (!leaflet.SubstancesID.Contains(new Guid(pair.Value)))
+                                {
+                                    interactions.Add((new Guid(pair.Value), keyword.level));
+                                }
                             }
                         }
                     }

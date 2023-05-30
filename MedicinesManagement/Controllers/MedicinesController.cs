@@ -1,10 +1,8 @@
-﻿using MedicinesManagement.AsyncDataServices;
-using MedicinesManagement.Exceptions;
+﻿using MedicinesManagement.Exceptions;
 using MedicinesManagement.RequestsModels;
 using MedicinesManagement.ResponseModels;
 using MedicinesManagement.Services.Medicines;
 using Microsoft.AspNetCore.Mvc;
-using System.IO;
 
 namespace MedicinesManagement.Controllers
 {
@@ -12,12 +10,10 @@ namespace MedicinesManagement.Controllers
     public class MedicinesController : ControllerBase
     {
         private IMedicinesService _medicinesService;
-        private IMessageBusClient _messageBusClient;
-
-        public MedicinesController(IMedicinesService medicinesService, IMessageBusClient messageBusClient)
+        
+        public MedicinesController(IMedicinesService medicinesService)
         {
-            _medicinesService = medicinesService;
-            _messageBusClient = messageBusClient;
+            _medicinesService = medicinesService;            
         }
 
         [HttpGet]
@@ -83,19 +79,7 @@ namespace MedicinesManagement.Controllers
             }
             try
             {
-                byte[] bytes = null;
-                using (var memoryStream = new MemoryStream())
-                {
-                    addUpdateLeafletRequest.Leaflet.CopyTo(memoryStream);
-                    bytes = memoryStream.ToArray();
-                }
-
-                _messageBusClient.PublishNewLeaflet(new Dtos.MedicineUpdateInfoDto()
-                {
-                    MedicineID = addUpdateLeafletRequest.MedicineID,
-                    Leaflet = bytes,
-                    EventName = "AddUpdateLeaflet"
-                });
+                await _medicinesService.AddUpdateLeaflet(addUpdateLeafletRequest.MedicineID, addUpdateLeafletRequest.Leaflet);
 
                 return Ok();
             }

@@ -1,6 +1,8 @@
-﻿using MedicinesManagement.Exceptions;
+﻿using MedicinesManagement.AsyncDataServices;
+using MedicinesManagement.Exceptions;
 using MedicinesManagement.Repos.ActiveSubstances;
 using MedicinesManagement.Repos.Medicines;
+using MedicinesManagement.RequestsModels;
 using MedicinesManagement.ResponseModels;
 using Microsoft.IdentityModel.Tokens;
 using System.Text.RegularExpressions;
@@ -11,11 +13,34 @@ namespace MedicinesManagement.Services.Medicines
     {
         private IMedicinesRepo _medicinesRepo;
         private IActiveSubstancesRepo _activeSubstancesRepo;
+        private IMessageBusClient _messageBusClient;
 
-        public MedicinesService(IMedicinesRepo medicinesRepo, IActiveSubstancesRepo activeSubstancesRepo)
+        public MedicinesService(IMedicinesRepo medicinesRepo, IActiveSubstancesRepo activeSubstancesRepo, IMessageBusClient messageBusClient)
         {
             _medicinesRepo = medicinesRepo;
-            _activeSubstancesRepo = activeSubstancesRepo;      
+            _activeSubstancesRepo = activeSubstancesRepo;  
+            _messageBusClient = messageBusClient;
+        }
+
+        public async Task AddUpdateLeaflet(Guid medicineID, IFormFile leaflet)
+        {
+            byte[] bytes = null;
+            using (var memoryStream = new MemoryStream())
+            {
+                leaflet.CopyTo(memoryStream);
+                bytes = memoryStream.ToArray();
+            }
+
+            var substances = await _activeSubstancesRepo.GetAllByCondition(x => x.Medicine.MedicineID == medicineID);
+
+            _messageBusClient.PublishNewLeaflet(new Dtos.MedicineUpdateInfoDto()
+            {
+                MedicineID = medicineID,
+                SubstancesID = substances.Select(x => x.ActiveSubstance.SubstanceID).ToArray(),
+                Leaflet = bytes,
+                EventName = "AddUpdateLeaflet"
+            });
+
         }
 
         public async Task<MedicinesListResponse> GetMedicinesByName(string name)
