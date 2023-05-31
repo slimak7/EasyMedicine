@@ -77,7 +77,7 @@ namespace ActiveSubstancesManagement.Helpers
 
                             if (regex.IsMatch(sentence))
                             {
-                                if (!leaflet.SubstancesID.Contains(new Guid(pair.Value)))
+                                if (!leaflet.SubstancesID.Contains(new Guid(pair.Value)) && !interactions.Select(x => x.substanceID).Contains(new Guid(pair.Value)))
                                 {
                                     interactions.Add((new Guid(pair.Value), keyword.level));
                                 }

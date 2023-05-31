@@ -9,3 +9,4 @@ Pacjenci przyjmujący jednocześnie, 2
 może zmniejszyć działanie, 2
 leki, 3
 lek, 3
+leków, 3

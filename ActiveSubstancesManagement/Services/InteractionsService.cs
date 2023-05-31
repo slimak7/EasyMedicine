@@ -1,6 +1,8 @@
 ﻿using ActiveSubstancesManagement.Exceptions;
 using ActiveSubstancesManagement.Repos;
 using ActiveSubstancesManagement.ResponseModels;
+using System.Reflection;
+using System.Xml;
 
 namespace ActiveSubstancesManagement.Services
 {
@@ -8,9 +10,36 @@ namespace ActiveSubstancesManagement.Services
     {
         private readonly IInteractionsRepo _interactionsRepo;
 
+        private readonly Dictionary<string, string> translationPairs = new Dictionary<string, string>();
+
         public InteractionsService(IInteractionsRepo interactionsRepo)
         {
             _interactionsRepo = interactionsRepo;
+
+            var translation = Assembly.GetExecutingAssembly().GetManifestResourceStream("ActiveSubstancesManagement.XMLTranslations.Translation_PL.xml");
+
+            string translationString = string.Empty;
+            using (StreamReader reader = new StreamReader(translation))
+            {
+                translationString = reader.ReadToEnd();
+            }
+            using (XmlReader reader = XmlReader.Create(new StringReader(translationString)))
+            {
+                while (reader.Read())
+                {
+                    if (reader.IsStartElement() && reader.Name == "ActiveSubstance")
+                    {
+                        string name = reader.GetAttribute("Name");
+                        string guid = reader.GetAttribute("SubstanceID").ToLower();
+
+                        if (!translationPairs.ContainsKey(guid))
+                        {
+                            translationPairs.Add(guid, name);
+                        }
+
+                    }
+                }
+            }
         }
 
         public async Task<InteractionsForMedicineResponse> GetInteractionsForMedicine(Guid MedicineID)
@@ -27,8 +56,8 @@ namespace ActiveSubstancesManagement.Services
                     {
                         SubstanceID = interaction.InteractedSubstanceID.ToString(),
                         InteractionName = interaction.InteractionLevel.InteractionLevelName,
-                        InteractionDefaultDescription = interaction.InteractionLevel.InteractionLevelDescription
-
+                        InteractionDefaultDescription = interaction.InteractionLevel.InteractionLevelDescription,
+                        SubstancePLName = translationPairs[interaction.InteractedSubstanceID.ToString()]                      
                     });
                 }
 

@@ -39,27 +39,32 @@ namespace ActiveSubstancesManagement.EventProcessing
                         var interactionsRepo = scope.ServiceProvider.GetRequiredService<IInteractionsRepo>();
                         var interactionsLevelsRepo = scope.ServiceProvider.GetRequiredService<IInteractionsLevelsRepo>();
 
-                        var currentInteractions = await interactionsRepo.GetAllByCondition(x => x.MedicineID == item.MedicineID);
-
-                        if (currentInteractions.Any())
-                        {
-                            foreach (var i in currentInteractions)
-                            {
-                                await interactionsRepo.Delete(i.InteractionID);
-                            }
-                        }
-
                         var interactionsLevels = await interactionsLevelsRepo.GetAll();
 
-                        foreach (var interaction in interactions)
+                        foreach (var id in item.MedicineID)
                         {
-                            await interactionsRepo.Add(new Interaction()
+
+                            var currentInteractions = await interactionsRepo.GetAllByCondition(x => x.MedicineID == id);
+
+                            if (currentInteractions.Any())
                             {
-                                InteractionID = new Guid(),
-                                MedicineID = item.MedicineID,
-                                InteractedSubstanceID = interaction.substanceID,
-                                InteractionLevel = interactionsLevels[interaction.interactionLevel - 1]
-                            });
+                                foreach (var i in currentInteractions)
+                                {
+                                    await interactionsRepo.Delete(i.InteractionID);
+                                }
+                            }
+
+
+                            foreach (var interaction in interactions)
+                            {
+                                await interactionsRepo.Add(new Interaction()
+                                {
+                                    InteractionID = new Guid(),
+                                    MedicineID = id,
+                                    InteractedSubstanceID = interaction.substanceID,
+                                    InteractionLevel = interactionsLevels[interaction.interactionLevel - 1]
+                                });
+                            }
                         }
                     }
 

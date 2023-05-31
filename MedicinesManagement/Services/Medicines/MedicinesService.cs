@@ -22,7 +22,7 @@ namespace MedicinesManagement.Services.Medicines
             _messageBusClient = messageBusClient;
         }
 
-        public async Task AddUpdateLeaflet(Guid medicineID, IFormFile leaflet)
+        public async Task AddUpdateLeaflet(List<Guid> medicineID, IFormFile leaflet)
         {
             byte[] bytes = null;
             using (var memoryStream = new MemoryStream())
@@ -31,11 +31,11 @@ namespace MedicinesManagement.Services.Medicines
                 bytes = memoryStream.ToArray();
             }
 
-            var substances = await _activeSubstancesRepo.GetAllByCondition(x => x.Medicine.MedicineID == medicineID);
+            var substances = await _activeSubstancesRepo.GetAllByCondition(x => x.Medicine.MedicineID == medicineID[0]);
 
             _messageBusClient.PublishNewLeaflet(new Dtos.MedicineUpdateInfoDto()
             {
-                MedicineID = medicineID,
+                MedicineID = medicineID.ToArray(),
                 SubstancesID = substances.Select(x => x.ActiveSubstance.SubstanceID).ToArray(),
                 Leaflet = bytes,
                 EventName = "AddUpdateLeaflet"
