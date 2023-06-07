@@ -1,0 +1,17 @@
+.row-content {
+    display: table-cell;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+.base-element {
+    margin: 0px 5px 0 0;
+    font-size: medium;
+}
+
+
+section {
+display: table;
+justify-self: center;
+}
