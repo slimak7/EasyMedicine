@@ -17,4 +17,30 @@
             >Search</button>
     </div>
 </section>
+<section>
+    <table mat-table [dataSource]="foundedMedicines">
+        <ng-container matColumnDef="ID">
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let medicine"> {{medicine.medicineID}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let medicine"> {{medicine.medicineName}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Power">
+            <th mat-header-cell *matHeaderCellDef> Power </th>
+            <td mat-cell *matCellDef="let medicine"> {{medicine.power}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Company">
+            <th mat-header-cell *matHeaderCellDef> Company </th>
+            <td mat-cell *matCellDef="let medicine"> {{medicine.companyName}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Substances">
+            <th mat-header-cell *matHeaderCellDef> Substances </th>
+            <td mat-cell *matCellDef="let medicine"> {{medicine.activeSubstances}} </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+        <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+    </table>
+</section>
 

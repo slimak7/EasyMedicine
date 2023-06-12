@@ -1,7 +1,7 @@
 export interface Medicine {
-    ID: string;
-    Name: string;
-    Power: string;
-    Company: string;
-    Substances: string[];
+    medicineID: string;
+    medicineName: string;
+    power: string;
+    companyName: string;
+    activeSubstances: string[];
 }

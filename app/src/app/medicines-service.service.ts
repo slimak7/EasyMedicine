@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Medicine } from '../Models/Medicine';
+import { MedicinesResponse } from '../Models/GetMedicinesResponse';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
@@ -13,17 +13,17 @@ export class MedicinesServiceService {
 
   constructor(private http: HttpClient) { }
 
-  public getMedicinesByRange(index: number, count: number): Observable<Medicine[]> {
-    return this.http.get<Medicine[]>(`${this.medicinesURL}Medicines/GetMedicines/GetByRange/${index}/${count}`)
+  public getMedicinesByRange(index: number, count: number): Observable<MedicinesResponse> {
+    return this.http.get<MedicinesResponse>(`${this.medicinesURL}Medicines/GetMedicines/GetByRange/${index}/${count}`)
     .pipe(
-      catchError(this.handleError<Medicine[]>('getMedicines', []))
+      catchError(this.handleError<MedicinesResponse>('getMedicines', ))
     );
   }
 
-  public getMedicinesByName(name: string): Observable<Medicine[]> {
-    return this.http.get<Medicine[]>(`${this.medicinesURL}Medicines/GetMedicines/GetByName/${name}`)
+  public getMedicinesByName(name: string): Observable<MedicinesResponse> {
+    return this.http.get<MedicinesResponse>(`${this.medicinesURL}Medicines/GetMedicines/GetByName/${name}`)
     .pipe(
-      catchError(this.handleError<Medicine[]>('getMedicines', []))
+      catchError(this.handleError<MedicinesResponse>('getMedicines', ))
     );
   }
 
