@@ -3,6 +3,7 @@ using MedicinesManagement.Context;
 using MedicinesManagement.Repos.ActiveSubstances;
 using MedicinesManagement.Repos.Medicines;
 using MedicinesManagement.Services.Medicines;
+using MedicinesManagement.SyncDataServices;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -50,6 +51,8 @@ namespace MedicinesManagement
             services.AddScoped<IMedicinesRepo, MedicinesRepo>();
             services.AddScoped<IActiveSubstancesRepo, ActiveSubstancesRepo>();
             services.AddScoped<IMedicinesService, MedicinesService>();
+            services.AddScoped<IHttpDataClient,  HttpDataClient>();
+            services.AddScoped<HttpClient, HttpClient>();
             services.AddSingleton<IMessageBusClient, MessageBusClient>();
 
             services.AddDbContext<AppDbContext>(options => options

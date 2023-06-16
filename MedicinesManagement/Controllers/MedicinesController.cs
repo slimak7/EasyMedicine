@@ -2,6 +2,7 @@
 using MedicinesManagement.RequestsModels;
 using MedicinesManagement.ResponseModels;
 using MedicinesManagement.Services.Medicines;
+using MedicinesManagement.SyncDataServices;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MedicinesManagement.Controllers
@@ -9,11 +10,13 @@ namespace MedicinesManagement.Controllers
     [Route("[controller]")]
     public class MedicinesController : ControllerBase
     {
-        private IMedicinesService _medicinesService;
-        
-        public MedicinesController(IMedicinesService medicinesService)
+        private readonly IMedicinesService _medicinesService;
+        private readonly IHttpDataClient _httpDataClient;
+
+        public MedicinesController(IMedicinesService medicinesService, IHttpDataClient httpDataClient)
         {
-            _medicinesService = medicinesService;            
+            _medicinesService = medicinesService;    
+            _httpDataClient = httpDataClient;
         }
 
         [HttpGet]
@@ -51,6 +54,30 @@ namespace MedicinesManagement.Controllers
             try
             {
                 var response = await _medicinesService.GetMedicinesByName(name);
+
+                return Ok(response);
+            }
+            catch (DataAccessException e)
+            {
+                return BadRequest(new MedicinesListResponse(e.Message));
+            }
+            catch (Exception e)
+            {
+                return Problem(e.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("GetMedicines/GetInteractions/{medicineID}")]
+        public async Task<IActionResult> GetMedicinesByRange(Guid medicineID)
+        {
+            if (!ModelState.IsValid)
+            {
+                return new BadRequestObjectResult("Invalid data provided");
+            }
+            try
+            {
+                var response = await _httpDataClient.GetMedicineInteractions(medicineID);
 
                 return Ok(response);
             }

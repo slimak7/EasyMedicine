@@ -10,5 +10,11 @@
             Success = success;
             Errors = errors;
         }
+        public BaseResponse()
+        {
+            Success = true;
+            Errors = null;
+        }
+
     }
 }
