@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MedicinesResponse } from '../Models/GetMedicinesResponse';
+import { MedicineInteractionsResponse } from 'src/Models/MedicineInteractionsResponse';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
@@ -9,7 +10,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class MedicinesServiceService {
 
-  private medicinesURL = "https://192.168.0.126:45455/";
+  private medicinesURL = "https://192.168.0.126:45458/";
 
   constructor(private http: HttpClient) { }
 
@@ -24,6 +25,13 @@ export class MedicinesServiceService {
     return this.http.get<MedicinesResponse>(`${this.medicinesURL}Medicines/GetMedicines/GetByName/${name}`)
     .pipe(
       catchError(this.handleError<MedicinesResponse>('getMedicines', ))
+    );
+  }
+
+  public getMedicinesInteractions(id: string): Observable<MedicineInteractionsResponse> {
+    return this.http.get<MedicineInteractionsResponse>(`${this.medicinesURL}Medicines/GetMedicines/GetInteractions/${id}`)
+    .pipe(
+      catchError(this.handleError<MedicineInteractionsResponse>('getMedicines', ))
     );
   }
 

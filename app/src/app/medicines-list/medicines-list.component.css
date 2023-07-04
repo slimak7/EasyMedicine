@@ -6,12 +6,24 @@
   }
 
 .base-element {
-    margin: 0px 5px 0 0;
+    margin: 0px 10px 0 0;
     font-size: medium;
+    justify-self: center;
 }
 
+.base {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
 
 section {
 display: table;
 justify-self: center;
+}
+
+.table-container {
+  max-height: 300px;
+  overflow: auto;
+  margin: 10px 0 0 0;
 }

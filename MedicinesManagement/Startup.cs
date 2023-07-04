@@ -45,6 +45,7 @@ namespace MedicinesManagement
                                     .AllowAnyMethod()
                                     .AllowAnyHeader()
                                     .AllowCredentials()
+
                             );
             });
 
