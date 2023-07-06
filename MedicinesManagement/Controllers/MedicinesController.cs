@@ -45,7 +45,7 @@ namespace MedicinesManagement.Controllers
 
         [HttpGet]
         [Route("GetMedicines/GetByName/{name}")]
-        public async Task<IActionResult> GetMedicinesByRange(string name)
+        public async Task<IActionResult> GetMedicinesByName(string name)
         {
             if (!ModelState.IsValid || name.Length < 3)
             {
@@ -69,7 +69,7 @@ namespace MedicinesManagement.Controllers
 
         [HttpGet]
         [Route("GetMedicines/GetInteractions/{medicineID}")]
-        public async Task<IActionResult> GetMedicinesByRange(Guid medicineID)
+        public async Task<IActionResult> GetMedicinesInteractions(Guid medicineID)
         {
             if (!ModelState.IsValid)
             {

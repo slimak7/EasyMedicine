@@ -39,7 +39,8 @@ export class MedicinesListComponent  {
   searchByName(): void {
 
     this.medicinesService.getMedicinesByName(this.medicineName).subscribe(medicines => { this.foundedMedicines = medicines.medicines; console.log(this.foundedMedicines); });
- 
+    
+    this.interactions = [];
     
   }
 

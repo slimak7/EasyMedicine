@@ -9,16 +9,18 @@ namespace MedicinesManagement.SyncDataServices
     {
         private readonly HttpClient _httpClient;
         private readonly IActiveSubstancesRepo _activeSubstancesRepo;
+        private readonly IConfiguration _configuration;
 
-        public HttpDataClient(HttpClient httpClient, IActiveSubstancesRepo activeSubstancesRepo)
+        public HttpDataClient(HttpClient httpClient, IActiveSubstancesRepo activeSubstancesRepo, IConfiguration configuration)
         {
             _httpClient = httpClient;
             _activeSubstancesRepo = activeSubstancesRepo;
+            _configuration = configuration;
         }
 
         public async Task<MedicineInteractionsResponse> GetMedicineInteractions(Guid medicineID)
         {
-            var response = await _httpClient.GetAsync($"https://192.168.0.126:45455/Interactions/GetInteractions/{medicineID}");
+            var response = await _httpClient.GetAsync($"{_configuration["SubstancesURI"]}Interactions/GetInteractions/{medicineID}");
 
             if (response.IsSuccessStatusCode)
             {

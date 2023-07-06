@@ -10,7 +10,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class MedicinesServiceService {
 
-  private medicinesURL = "https://192.168.0.126:45458/";
+  private medicinesURL = "https://192.168.0.126:45455/";
 
   constructor(private http: HttpClient) { }
 
