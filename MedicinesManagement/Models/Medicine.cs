@@ -10,5 +10,6 @@ namespace MedicinesManagement.Models
         public string MedicineName { get; set; }
         public string Power { get; set; }
         public string CompanyName { get; set; }
+        public string leafletURL { get; set; }
     }
 }

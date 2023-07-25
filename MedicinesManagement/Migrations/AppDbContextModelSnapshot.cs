@@ -58,6 +58,10 @@ namespace MedicinesManagement.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("leafletURL")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("MedicineID");
 
                     b.ToTable("Medicines");

@@ -13,9 +13,7 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Keywords\keywords_PL.txt" />
-    <EmbeddedResource Include="XMLTranslations\Translation_PL.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <EmbeddedResource Include="XMLTranslations\Translation_PL.xml" />
   </ItemGroup>
 
   <ItemGroup>

@@ -6,13 +6,13 @@ from more_itertools import unique_everseen
 with open('records.csv', encoding="utf8") as csv_records:
     records = csv.reader(csv_records, delimiter=';')
     selectedColums = []
-    includedCols = [1, 7, 13, 15]
+    includedCols = [1, 7, 13, 15, 22]
     for row in records:
         content = list(row[i] for i in includedCols)
         selectedColums.append(content)
     selectedRecords = unique_everseen(selectedColums)
 
-    medicinesTable = PrettyTable(["MedicineName", "Power", "CompanyName", "SubstanceName"])
+    medicinesTable = PrettyTable(["MedicineName", "Power", "CompanyName", "SubstanceName", "LeafletURL"])
 
     a = 0
     for row in selectedRecords:
@@ -20,7 +20,7 @@ with open('records.csv', encoding="utf8") as csv_records:
         if a != 0: 
             
             if len(row[1]) < 30 and row[1] != "-" and len(row[2]) < 30 and len(row[2]) < 30 and '\'' not in row[2] and row[3] != '' and len(row[3]) < 60: 
-                newRow = [row[0], row[1], row[2], row[3]]                
+                newRow = [row[0], row[1], row[2], row[3], row[4]]                
                 medicinesTable.add_row(newRow)
                 
         a = 1
@@ -53,7 +53,7 @@ with open('records.csv', encoding="utf8") as csv_records:
         numberOfMedicineRows += 1
         row.border = False
         row.header = False
-        medicineValues += "(NEWID(), '" + row.get_string(fields=["MedicineName"]).strip() + "', '" + row.get_string(fields=["CompanyName"]).strip() + "', '" + row.get_string(fields=["Power"]).strip() + "')"
+        medicineValues += "(NEWID(), '" + row.get_string(fields=["MedicineName"]).strip() + "', '" + row.get_string(fields=["CompanyName"]).strip() + "', '" + row.get_string(fields=["Power"]).strip() + "', '" + row.get_string(fields=["LeafletURL"]).strip() + "')"
 
         substanceList = []
         separatedSubstancesNames = []
