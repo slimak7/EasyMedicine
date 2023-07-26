@@ -22,22 +22,15 @@ namespace MedicinesManagement.Services.Medicines
             _messageBusClient = messageBusClient;
         }
 
-        public async Task AddUpdateLeaflet(List<Guid> medicineID, IFormFile leaflet)
+        public async Task AddUpdateLeaflet(List<Guid> medicineID, byte[] leaflet)
         {
-            byte[] bytes = null;
-            using (var memoryStream = new MemoryStream())
-            {
-                leaflet.CopyTo(memoryStream);
-                bytes = memoryStream.ToArray();
-            }
-
             var substances = await _activeSubstancesRepo.GetAllByCondition(x => x.Medicine.MedicineID == medicineID[0]);
 
             _messageBusClient.PublishNewLeaflet(new Dtos.MedicineUpdateInfoDto()
             {
                 MedicineID = medicineID.ToArray(),
                 SubstancesID = substances.Select(x => x.ActiveSubstance.SubstanceID).ToArray(),
-                Leaflet = bytes,
+                Leaflet = leaflet,
                 EventName = "AddUpdateLeaflet"
             });
 

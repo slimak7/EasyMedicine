@@ -6,6 +6,6 @@ namespace MedicinesManagement.Services.Medicines
     {
         Task<MedicinesListResponse> GetMedicinesByRange(int index, int count);
         Task<MedicinesListResponse> GetMedicinesByName(string name);
-        Task AddUpdateLeaflet(List<Guid> medicineID, IFormFile leaflet);
+        Task AddUpdateLeaflet(List<Guid> medicineID, byte[] leaflet);
     }
 }

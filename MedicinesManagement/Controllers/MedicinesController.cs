@@ -106,7 +106,14 @@ namespace MedicinesManagement.Controllers
             }
             try
             {
-                await _medicinesService.AddUpdateLeaflet(addUpdateLeafletRequest.MedicineID, addUpdateLeafletRequest.Leaflet);
+                byte[] bytes = null;
+                using (var memoryStream = new MemoryStream())
+                {
+                    addUpdateLeafletRequest.Leaflet.CopyTo(memoryStream);
+                    bytes = memoryStream.ToArray();
+                }
+
+                await _medicinesService.AddUpdateLeaflet(addUpdateLeafletRequest.MedicineID, bytes);
 
                 return Ok();
             }

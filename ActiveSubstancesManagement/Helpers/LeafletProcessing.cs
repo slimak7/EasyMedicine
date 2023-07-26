@@ -11,83 +11,91 @@ namespace ActiveSubstancesManagement.Helpers
         public static List<(Guid substanceID, int interactionLevel)> GetInteractedSubstances(LeafletAddedDto leaflet)
         {
             List<(Guid substanceID, int interactionLevelID)> interactions = new List<(Guid substanceID, int interactionLevelID)>();
-
-            var document = UglyToad.PdfPig.PdfDocument.Open(leaflet.Leaflet);
-
-            var translation = Assembly.GetExecutingAssembly().GetManifestResourceStream("ActiveSubstancesManagement.XMLTranslations.Translation_PL.xml");
-            var keywords = Assembly.GetExecutingAssembly().GetManifestResourceStream("ActiveSubstancesManagement.Keywords.keywords_PL.txt");
-
-            string translationString;
-            List<(string keyword, int level)> keywordsList = new List<(string, int)>();
-
-            using (StreamReader reader = new StreamReader(translation))
+            try
             {
-                translationString = reader.ReadToEnd();                
-            }
 
-            using (StreamReader reader = new StreamReader(keywords))
-            {
-                var keywordsString = reader.ReadToEnd();
+                var document = UglyToad.PdfPig.PdfDocument.Open(leaflet.Leaflet);
 
-                var pairs = keywordsString.Split("\n").ToList();
+                var translation = Assembly.GetExecutingAssembly().GetManifestResourceStream("ActiveSubstancesManagement.XMLTranslations.Translation_PL.xml");
+                var keywords = Assembly.GetExecutingAssembly().GetManifestResourceStream("ActiveSubstancesManagement.Keywords.keywords_PL.txt");
 
-                foreach(var pair in pairs)
+                string translationString;
+                List<(string keyword, int level)> keywordsList = new List<(string, int)>();
+
+                using (StreamReader reader = new StreamReader(translation))
                 {
-                    var elements = pair.Split(",");
-
-
-                    keywordsList.Add((elements[0], int.Parse(elements[1])));
+                    translationString = reader.ReadToEnd();
                 }
-            }
 
-            var leafletPages = document.GetPages().Select(x => x.Text).ToList();
-
-            string leafletText = leafletPages.Aggregate((x,y) => x + "\n" + y);
-
-            var sentences = leafletText.Split(".");
-
-            Dictionary<string, string> translationPairs = new Dictionary<string, string>();
-
-            using (XmlReader  reader = XmlReader.Create(new StringReader(translationString)))
-            {
-                while(reader.Read())
+                using (StreamReader reader = new StreamReader(keywords))
                 {
-                    if (reader.IsStartElement() && reader.Name == "ActiveSubstance")
-                    {
-                        string name = reader.GetAttribute("Name");
-                        string guid = reader.GetAttribute("SubstanceID");
+                    var keywordsString = reader.ReadToEnd();
 
-                        translationPairs.Add(name, guid);
-                        
-                    }                  
+                    var pairs = keywordsString.Split("\n").ToList();
+
+                    foreach (var pair in pairs)
+                    {
+                        var elements = pair.Split(",");
+
+
+                        keywordsList.Add((elements[0], int.Parse(elements[1])));
+                    }
                 }
-            }
 
-            foreach (var keyword in keywordsList)
-            {
-                var foundSentences = Array.FindAll(sentences, (x => x.Contains(keyword.keyword)));
+                var leafletPages = document.GetPages().Select(x => x.Text).ToList();
 
-                if (foundSentences.Any())
+                string leafletText = leafletPages.Aggregate((x, y) => x + "\n" + y);
+
+                var sentences = leafletText.Split(".");
+
+                Dictionary<string, string> translationPairs = new Dictionary<string, string>();
+
+                using (XmlReader reader = XmlReader.Create(new StringReader(translationString)))
                 {
-                    foreach (var sentence in foundSentences)
+                    while (reader.Read())
                     {
-                        foreach(var pair in translationPairs)
+                        if (reader.IsStartElement() && reader.Name == "ActiveSubstance")
                         {
-                            Regex regex = new Regex(@"." + pair.Key.Substring(0, pair.Key.Length - 1).Replace("(", " ").Replace(")", " ") + ".", RegexOptions.IgnoreCase);
+                            string name = reader.GetAttribute("Name");
+                            string guid = reader.GetAttribute("SubstanceID");
 
-                            if (regex.IsMatch(sentence))
+                            translationPairs.Add(name, guid);
+
+                        }
+                    }
+                }
+
+                foreach (var keyword in keywordsList)
+                {
+                    var foundSentences = Array.FindAll(sentences, (x => x.Contains(keyword.keyword)));
+
+                    if (foundSentences.Any())
+                    {
+                        foreach (var sentence in foundSentences)
+                        {
+                            foreach (var pair in translationPairs)
                             {
-                                if (!leaflet.SubstancesID.Contains(new Guid(pair.Value)) && !interactions.Select(x => x.substanceID).Contains(new Guid(pair.Value)))
+                                Regex regex = new Regex(@"." + pair.Key.Substring(0, pair.Key.Length - 1).Replace("(", " ").Replace(")", " ") + ".", RegexOptions.IgnoreCase);
+
+                                if (regex.IsMatch(sentence))
                                 {
-                                    interactions.Add((new Guid(pair.Value), keyword.level));
+                                    if (!leaflet.SubstancesID.Contains(new Guid(pair.Value)) && !interactions.Select(x => x.substanceID).Contains(new Guid(pair.Value)))
+                                    {
+                                        interactions.Add((new Guid(pair.Value), keyword.level));
+                                    }
                                 }
                             }
                         }
                     }
                 }
-            }
 
-            return interactions;
+                return interactions;
+            }
+            catch (Exception ex) 
+            {
+                Console.WriteLine(ex.Message);
+                return interactions;
+            }
         }
     }
 }

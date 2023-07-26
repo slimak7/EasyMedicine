@@ -1,4 +1,5 @@
 ﻿using MedicinesManagement.AsyncDataServices;
+using MedicinesManagement.BackgroundServices;
 using MedicinesManagement.Context;
 using MedicinesManagement.Repos.ActiveSubstances;
 using MedicinesManagement.Repos.Medicines;
@@ -55,6 +56,7 @@ namespace MedicinesManagement
             services.AddScoped<IHttpDataClient,  HttpDataClient>();
             services.AddScoped<HttpClient, HttpClient>();
             services.AddSingleton<IMessageBusClient, MessageBusClient>();
+            services.AddHostedService<LeafletsAutoDownload>();    
 
             services.AddDbContext<AppDbContext>(options => options
             .UseSqlServer(Configuration.GetConnectionString("Default"), options => 

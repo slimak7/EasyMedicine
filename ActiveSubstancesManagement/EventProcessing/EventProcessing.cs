@@ -32,43 +32,53 @@ namespace ActiveSubstancesManagement.EventProcessing
                         return;
                     }
 
-                    var interactions = LeafletProcessing.GetInteractedSubstances(item);
+                    ProcessLeaflet(item);
+                    Console.WriteLine("Leaflet " + item.MedicineID + " processed");
 
-                    using (var scope = _scopeFactory.CreateScope())
+                    break;
+            }
+        }
+
+        private async void ProcessLeaflet(LeafletAddedDto leaflet)
+        {
+            var interactions = LeafletProcessing.GetInteractedSubstances(leaflet);
+
+            using (var scope = _scopeFactory.CreateScope())
+            {
+                var interactionsRepo = scope.ServiceProvider.GetRequiredService<IInteractionsRepo>();
+                var interactionsLevelsRepo = scope.ServiceProvider.GetRequiredService<IInteractionsLevelsRepo>();
+
+                var interactionsLevels = await interactionsLevelsRepo.GetAll();
+
+                foreach (var id in leaflet.MedicineID)
+                {
+
+                    var currentInteractions = await interactionsRepo.GetAllByCondition(x => x.MedicineID == id);
+
+                    if (currentInteractions.Any())
                     {
-                        var interactionsRepo = scope.ServiceProvider.GetRequiredService<IInteractionsRepo>();
-                        var interactionsLevelsRepo = scope.ServiceProvider.GetRequiredService<IInteractionsLevelsRepo>();
-
-                        var interactionsLevels = await interactionsLevelsRepo.GetAll();
-
-                        foreach (var id in item.MedicineID)
+                        foreach (var i in currentInteractions)
                         {
-
-                            var currentInteractions = await interactionsRepo.GetAllByCondition(x => x.MedicineID == id);
-
-                            if (currentInteractions.Any())
-                            {
-                                foreach (var i in currentInteractions)
-                                {
-                                    await interactionsRepo.Delete(i.InteractionID);
-                                }
-                            }
-
-
-                            foreach (var interaction in interactions)
-                            {
-                                await interactionsRepo.Add(new Interaction()
-                                {
-                                    InteractionID = new Guid(),
-                                    MedicineID = id,
-                                    InteractedSubstanceID = interaction.substanceID,
-                                    InteractionLevel = interactionsLevels[interaction.interactionLevel - 1]
-                                });
-                            }
+                            await interactionsRepo.Delete(i.InteractionID);
                         }
                     }
 
-                    break;
+
+                    foreach (var interaction in interactions)
+                    {
+                        if (!leaflet.SubstancesID.Contains(interaction.substanceID))
+                        {
+                            await interactionsRepo.Add(new Interaction()
+                            {
+                                InteractionID = new Guid(),
+                                MedicineID = id,
+                                InteractedSubstanceID = interaction.substanceID,
+                                InteractionLevel = interactionsLevels[interaction.interactionLevel - 1]
+                            });
+                        }
+                    }
+
+                }
             }
         }
 
