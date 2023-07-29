@@ -51,9 +51,10 @@ namespace MedicinesManagement
             });
 
             services.AddScoped<IMedicinesRepo, MedicinesRepo>();
-            services.AddScoped<IActiveSubstancesRepo, ActiveSubstancesRepo>();
+            services.AddScoped<IMedicineActiveSubstancesRepo, MedicineActiveSubstancesRepo>();
             services.AddScoped<IMedicinesService, MedicinesService>();
             services.AddScoped<IHttpDataClient,  HttpDataClient>();
+            services.AddScoped<IActiveSubstancesRepo, ActiveSubstancesRepo>();
             services.AddScoped<HttpClient, HttpClient>();
             services.AddSingleton<IMessageBusClient, MessageBusClient>();
             services.AddHostedService<LeafletsAutoDownload>();    

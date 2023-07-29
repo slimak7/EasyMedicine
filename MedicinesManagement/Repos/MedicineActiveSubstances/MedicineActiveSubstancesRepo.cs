@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MedicinesManagement.Repos.ActiveSubstances
 {
-    public class ActiveSubstancesRepo : IActiveSubstancesRepo
+    public class MedicineActiveSubstancesRepo : IMedicineActiveSubstancesRepo
     {
         private AppDbContext _appDbContext;
 
-        public ActiveSubstancesRepo(AppDbContext appDbContext)
+        public MedicineActiveSubstancesRepo(AppDbContext appDbContext)
         {
             _appDbContext = appDbContext;
         }

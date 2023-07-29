@@ -2,20 +2,23 @@
 using MedicinesManagement.Repos.ActiveSubstances;
 using MedicinesManagement.ResponseModels;
 using MedicinesManagement.SyncDataServices.Model;
+using System.Xml.Linq;
 
 namespace MedicinesManagement.SyncDataServices
 {
     public class HttpDataClient : IHttpDataClient
     {
         private readonly HttpClient _httpClient;
-        private readonly IActiveSubstancesRepo _activeSubstancesRepo;
+        private readonly IMedicineActiveSubstancesRepo _medicineActiveSubstancesRepo;
+        private readonly IActiveSubstancesRepo _substancesRepo;
         private readonly IConfiguration _configuration;
 
-        public HttpDataClient(HttpClient httpClient, IActiveSubstancesRepo activeSubstancesRepo, IConfiguration configuration)
+        public HttpDataClient(HttpClient httpClient, IMedicineActiveSubstancesRepo activeSubstancesRepo, IConfiguration configuration, IActiveSubstancesRepo substancesRepo)
         {
             _httpClient = httpClient;
-            _activeSubstancesRepo = activeSubstancesRepo;
+            _medicineActiveSubstancesRepo = activeSubstancesRepo;
             _configuration = configuration;
+            _substancesRepo = substancesRepo;
         }
 
         public async Task<MedicineInteractionsResponse> GetMedicineInteractions(Guid medicineID)
@@ -28,10 +31,13 @@ namespace MedicinesManagement.SyncDataServices
 
                 var content = await response.Content.ReadFromJsonAsync<InteractionsForMedicineResponse>();
 
+                var substancesIDs = content.Interactions.Select(x => new Guid(x.SubstanceID)).ToList();
+
+                var substances = await _substancesRepo.GetAllByCondition(x => substancesIDs.Contains(x.SubstanceID));
 
                 foreach (var element in content.Interactions)
                 {
-                    var substance = await _activeSubstancesRepo.GetByCondition(x => x.ActiveSubstance.SubstanceID == new Guid(element.SubstanceID));
+                    
                     interactions.Add(new Interaction
                     {
                         InteractionDescription = element.InteractionDefaultDescription,
@@ -40,7 +46,7 @@ namespace MedicinesManagement.SyncDataServices
                         {
                             SubstanceID = element.SubstanceID,
                             SelectedLanguageName = element.SubstancePLName,
-                            Name = substance.ActiveSubstance.SubstanceName
+                            Name = substances.Find(x => x.SubstanceID == new Guid(element.SubstanceID))?.SubstanceName??""
                         }
                     });
                 }

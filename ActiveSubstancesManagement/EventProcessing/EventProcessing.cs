@@ -2,6 +2,7 @@
 using ActiveSubstancesManagement.Helpers;
 using ActiveSubstancesManagement.Models;
 using ActiveSubstancesManagement.Repos;
+using System.Diagnostics;
 using System.Text.Json;
 
 namespace ActiveSubstancesManagement.EventProcessing
@@ -33,8 +34,7 @@ namespace ActiveSubstancesManagement.EventProcessing
                     }
 
                     ProcessLeaflet(item);
-                    Console.WriteLine("Leaflet " + item.MedicineID + " processed");
-
+                    
                     break;
             }
         }
@@ -79,6 +79,7 @@ namespace ActiveSubstancesManagement.EventProcessing
                     }
 
                 }
+                Debug.WriteLine("\n\n\n\n\n\n\n\nLeaflet for medicineID: " + leaflet.MedicineID[0] + " processed\n" + interactions.Count() + " interaction(s) added");
             }
         }
 

@@ -2,7 +2,7 @@
 
 namespace MedicinesManagement.Repos.ActiveSubstances
 {
-    public interface IActiveSubstancesRepo : IRepo<MedicineActiveSubstance>
+    public interface IMedicineActiveSubstancesRepo : IRepo<MedicineActiveSubstance>
     {
     }
 }

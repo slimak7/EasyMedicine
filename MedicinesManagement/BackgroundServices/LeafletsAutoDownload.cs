@@ -6,15 +6,20 @@ namespace MedicinesManagement.BackgroundServices
     public class LeafletsAutoDownload : BackgroundService
     {
         private readonly IServiceScopeFactory _scopeFactory;
+        private readonly IConfiguration _configuration;
 
-        public LeafletsAutoDownload(IServiceScopeFactory serviceScopeFactory)
+        public LeafletsAutoDownload(IServiceScopeFactory serviceScopeFactory, IConfiguration configuration)
         {
             _scopeFactory = serviceScopeFactory;
-
+            _configuration = configuration;
         }
 
         protected override async Task<Task> ExecuteAsync(CancellationToken stoppingToken)
         {
+            if (!_configuration.GetSection("Leaflets").GetValue<bool>("LeafletsAutoProcessing"))
+            {
+                return Task.CompletedTask;
+            }
 
             while (!stoppingToken.IsCancellationRequested)
             {

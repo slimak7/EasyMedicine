@@ -12,10 +12,10 @@ namespace MedicinesManagement.Services.Medicines
     public class MedicinesService : IMedicinesService
     {
         private IMedicinesRepo _medicinesRepo;
-        private IActiveSubstancesRepo _activeSubstancesRepo;
+        private IMedicineActiveSubstancesRepo _activeSubstancesRepo;
         private IMessageBusClient _messageBusClient;
 
-        public MedicinesService(IMedicinesRepo medicinesRepo, IActiveSubstancesRepo activeSubstancesRepo, IMessageBusClient messageBusClient)
+        public MedicinesService(IMedicinesRepo medicinesRepo, IMedicineActiveSubstancesRepo activeSubstancesRepo, IMessageBusClient messageBusClient)
         {
             _medicinesRepo = medicinesRepo;
             _activeSubstancesRepo = activeSubstancesRepo;  
