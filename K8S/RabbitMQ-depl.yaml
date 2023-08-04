@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: rabbitmq-depl
+spec:
+    replicas: 1
+    selector:   
+        matchLabels:
+            app: rabbitmq
+    template:
+        metadata:
+            labels:
+                app: rabbitmq
+        spec: 
+            containers:
+                - name: rabbitmq
+                  image: rabbitmq:3-management
+                  ports:
+                    - containerPort: 14563
+                      name: rb-port-ext       
+                    - containerPort: 5672
+                      name: rb-port-int
+---
+apiVersion: v1
+kind: Service
+metadata: 
+    name: rabbit-mq-cluster-ip
+spec:
+    type: ClusterIP
+    selector:
+        app: rabbitmq
+    ports:
+        - name: rb-port-ext  
+          protocol: TCP
+          port: 14563
+          targetPort: 14563
+        - name: rb-port-int
+          protocol: TCP
+          port: 5672
+          targetPort: 5672
+---
+apiVersion: v1
+kind: Service
+metadata: 
+    name: rabbit-mq-loadbalancer
+spec:
+    type: LoadBalancer
+    selector:
+        app: rabbitmq
+    ports:
+        - name: rb-port-ext  
+          protocol: TCP
+          port: 14563
+          targetPort: 14563
+        - name: rb-port-int
+          protocol: TCP
+          port: 5672
+          targetPort: 5672
