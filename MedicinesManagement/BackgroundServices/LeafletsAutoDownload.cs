@@ -16,11 +16,9 @@ namespace MedicinesManagement.BackgroundServices
 
         protected override async Task<Task> ExecuteAsync(CancellationToken stoppingToken)
         {
-            if (!_configuration.GetSection("Leaflets").GetValue<bool>("LeafletsAutoProcessing"))
-            {
-                return Task.CompletedTask;
-            }
+            bool sendLeaflets = _configuration.GetSection("Leaflets").GetValue<bool>("LeafletsAutoProcessing");
 
+            
             while (!stoppingToken.IsCancellationRequested)
             {
                 using (var scope = _scopeFactory.CreateScope())
@@ -33,7 +31,7 @@ namespace MedicinesManagement.BackgroundServices
 
                     foreach (var medicine in medicines)
                     {
-                        if (medicine.leafletURL != "")
+                        if (sendLeaflets && medicine.leafletURL != "")
                         {
                             var response = await httpClient.GetAsync(medicine.leafletURL);
 

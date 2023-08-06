@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: medicinesmanagement-depl
+spec: 
+    replicas: 1
+    selector:
+        matchLabels:
+            app: medicinesmanagement
+    template: 
+        metadata:
+            labels:
+                app: medicinesmanagement
+        spec: 
+            containers: 
+                - name: medicinesmanagement
+                  image: klekot789/medicinesmanagement
+                  ports:
+                    - containerPort: 80
+                      name: http       
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: medicinesmanagement-cluster-ip
+spec:
+    type: ClusterIP
+    selector:   
+        app: medicinesmanagement
+    ports:
+        - name: medicinesmanagement-http
+          protocol: TCP
+          port: 80
+          targetPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata: 
+    name: medicinesmanagement-loadbalancer
+spec:
+    type: LoadBalancer
+    selector:
+        app: medicinesmanagement
+    ports:
+        - name: medicinesmanagement-port-ext  
+          protocol: TCP
+          port: 11456
+          targetPort: 80
+
+                    
