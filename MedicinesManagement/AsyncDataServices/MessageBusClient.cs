@@ -1,5 +1,6 @@
 ﻿using MedicinesManagement.Dtos;
 using RabbitMQ.Client;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.Json;
 
@@ -15,10 +16,12 @@ namespace MedicinesManagement.AsyncDataServices
         {
             _configuration = configuration;
 
+            string sectionName = RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ? "DockerDepl" : "Dev";
+
             var factory = new ConnectionFactory() 
-            { 
-                HostName = _configuration["RabbitMQHost"],
-                Port = int.Parse(_configuration["RabbitMQPort"])
+            {
+                HostName = _configuration.GetSection(sectionName)["RabbitMQHost"],
+                Port = int.Parse(_configuration.GetSection(sectionName)["RabbitMQPort"])
             };
 
             try
