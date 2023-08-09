@@ -50,9 +50,9 @@ spec:
     ports:
         - name: rb-port-ext  
           protocol: TCP
-          port: 14563
+          port: 17856
           targetPort: 14563
         - name: rb-port-int
           protocol: TCP
-          port: 5672
+          port: 16352
           targetPort: 5672

@@ -13,6 +13,8 @@ namespace ActiveSubstancesManagement.Helpers
             List<(Guid substanceID, int interactionLevelID)> interactions = new List<(Guid substanceID, int interactionLevelID)>();
             try
             {
+                StatsCollector statsCollector = new StatsCollector(leaflet.MedicineID[0].ToString());
+                statsCollector.Start();
 
                 var document = UglyToad.PdfPig.PdfDocument.Open(leaflet.Leaflet);
 
@@ -71,6 +73,8 @@ namespace ActiveSubstancesManagement.Helpers
 
                     if (foundSentences.Any())
                     {
+                        statsCollector.NumberOfFoundKeywords = foundSentences.Length;
+
                         foreach (var sentence in foundSentences)
                         {
                             foreach (var pair in translationPairs)
@@ -82,12 +86,16 @@ namespace ActiveSubstancesManagement.Helpers
                                     if (!leaflet.SubstancesID.Contains(new Guid(pair.Value)) && !interactions.Select(x => x.substanceID).Contains(new Guid(pair.Value)))
                                     {
                                         interactions.Add((new Guid(pair.Value), keyword.level));
+
+                                        statsCollector.NumberOfFoundSubstances++;
                                     }
                                 }
                             }
                         }
                     }
                 }
+
+                statsCollector.End();
 
                 return interactions;
             }

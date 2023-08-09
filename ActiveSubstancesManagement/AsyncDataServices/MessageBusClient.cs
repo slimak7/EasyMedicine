@@ -1,6 +1,7 @@
 ﻿using ActiveSubstancesManagement.EventProcessing;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace ActiveSubstancesManagement.AsyncDataServices
@@ -23,10 +24,12 @@ namespace ActiveSubstancesManagement.AsyncDataServices
 
         private void InitializeConnection()
         {
+            string sectionName = RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ? "DockerDepl" : "Dev";
+
             var factory = new ConnectionFactory()
             {
-                HostName = _configuration["RabbitMQHost"],
-                Port = int.Parse(_configuration["RabbitMQPort"])
+                HostName = _configuration.GetSection(sectionName)["RabbitMQHost"],
+                Port = int.Parse(_configuration.GetSection(sectionName)["RabbitMQPort"])
             };
 
             _connection = factory.CreateConnection();

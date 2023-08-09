@@ -2,6 +2,7 @@
 using MedicinesManagement.Repos.ActiveSubstances;
 using MedicinesManagement.ResponseModels;
 using MedicinesManagement.SyncDataServices.Model;
+using System.Runtime.InteropServices;
 using System.Xml.Linq;
 
 namespace MedicinesManagement.SyncDataServices
@@ -23,7 +24,9 @@ namespace MedicinesManagement.SyncDataServices
 
         public async Task<MedicineInteractionsResponse> GetMedicineInteractions(Guid medicineID)
         {
-            var response = await _httpClient.GetAsync($"{_configuration["SubstancesURI"]}Interactions/GetInteractions/{medicineID}");
+            string sectionName = RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ? "DockerDepl" : "Dev";
+
+            var response = await _httpClient.GetAsync($"{_configuration.GetSection(sectionName)["SubstancesURI"]}Interactions/GetInteractions/{medicineID}");
 
             if (response.IsSuccessStatusCode)
             {

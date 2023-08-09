@@ -1,5 +1,6 @@
 ﻿using MedicinesManagement.Repos.Medicines;
 using MedicinesManagement.Services.Medicines;
+using System.Runtime.InteropServices;
 
 namespace MedicinesManagement.BackgroundServices
 {
@@ -16,7 +17,8 @@ namespace MedicinesManagement.BackgroundServices
 
         protected override async Task<Task> ExecuteAsync(CancellationToken stoppingToken)
         {
-            bool sendLeaflets = _configuration.GetSection("Leaflets").GetValue<bool>("LeafletsAutoProcessing");
+            string sectionName = RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ? "DockerDepl" : "Dev";
+            bool sendLeaflets = _configuration.GetSection(sectionName).GetValue<bool>("LeafletsAutoProcessing");
 
             
             while (!stoppingToken.IsCancellationRequested)
@@ -33,11 +35,24 @@ namespace MedicinesManagement.BackgroundServices
                     {
                         if (sendLeaflets && medicine.leafletURL != "")
                         {
-                            var response = await httpClient.GetAsync(medicine.leafletURL);
+                            try
+                            {
+                                var httpClientHandler = new HttpClientHandler
+                                {
+                                    SslProtocols = System.Security.Authentication.SslProtocols.Tls12 | System.Security.Authentication.SslProtocols.Tls13 | System.Security.Authentication.SslProtocols.Tls11,
+                                    UseDefaultCredentials = true
+                                };
+                                HttpClient client = new HttpClient(httpClientHandler);
+                                var response = await client.GetAsync(medicine.leafletURL);
 
-                            var leaflet = await response.Content.ReadAsByteArrayAsync();
+                                var leaflet = await response.Content.ReadAsByteArrayAsync();
 
-                            await medicinesService.AddUpdateLeaflet(new List<Guid>() { medicine.MedicineID }, leaflet);
+                                await medicinesService.AddUpdateLeaflet(new List<Guid>() { medicine.MedicineID }, leaflet);
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine(ex.Message);
+                            }
                         }
                     }
                 }
