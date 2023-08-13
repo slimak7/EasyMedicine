@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
     name: activesubstancesmanagement-depl
 spec: 
-    replicas: 0
+    replicas: 1
     selector:
         matchLabels:
             app: substancesmanagement
@@ -14,7 +14,7 @@ spec:
         spec: 
             containers: 
                 - name: substancesmanagement
-                  image: klekot789/activesubstancesmanagement
+                  image: klekot789/activesubstancesmanagement:latest
                   ports:
                     - containerPort: 80
                       name: http       

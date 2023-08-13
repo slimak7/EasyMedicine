@@ -64,16 +64,21 @@
         {
             string path = Path.Combine(_path, _date);
 
-            string fileName = "stats_" + _medicineID.Replace("-", "");
+            string fileName = "stats_" + _medicineID.Replace("-", "_");
 
-            int fileNumber = 1;
-            while (File.Exists(Path.Combine(path, fileName + "_" + fileNumber)))
+            lock (_lock)
             {
-                fileNumber++;
-            }
-            fileName += "_" + fileNumber;
 
-            File.WriteAllText(path + "/" + fileName + ".txt", text);
+                int fileNumber = 1;
+                while (File.Exists(path + "/" + fileName + "_" + fileNumber + ".txt"))
+                {
+                    fileNumber++;
+                }
+                fileName += "_" + fileNumber;
+
+                File.WriteAllText(path + "/" + fileName + ".txt", text);
+
+            }
             
         }
     }
