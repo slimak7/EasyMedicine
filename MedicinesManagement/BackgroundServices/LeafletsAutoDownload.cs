@@ -33,21 +33,37 @@ namespace MedicinesManagement.BackgroundServices
 
                     foreach (var medicine in medicines)
                     {
-                        if (sendLeaflets && medicine.leafletURL != "")
+                        if (medicine.leafletURL != "")
                         {
                             try
                             {
-                                var httpClientHandler = new HttpClientHandler
+                                if (medicine.leafletUpdateDate == null || (DateTime.Now.Subtract((DateTime)medicine.leafletUpdateDate)).Days > _configuration.GetValue<int>("UpdateLeafletDaysPeriod"))
                                 {
-                                    SslProtocols = System.Security.Authentication.SslProtocols.Tls12 | System.Security.Authentication.SslProtocols.Tls13 | System.Security.Authentication.SslProtocols.Tls11,
-                                    UseDefaultCredentials = true
-                                };
-                                HttpClient client = new HttpClient(httpClientHandler);
-                                var response = await client.GetAsync(medicine.leafletURL);
 
-                                var leaflet = await response.Content.ReadAsByteArrayAsync();
+                                    var httpClientHandler = new HttpClientHandler
+                                    {
+                                        SslProtocols = System.Security.Authentication.SslProtocols.Tls12,
+                                        UseDefaultCredentials = true
+                                    };
+                                    HttpClient client = new HttpClient(httpClientHandler);
+                                    var response = await client.GetAsync(medicine.leafletURL);
 
-                                await medicinesService.AddUpdateLeaflet(new List<Guid>() { medicine.MedicineID }, leaflet);
+                                    var leaflet = await response.Content.ReadAsByteArrayAsync();
+
+                                    medicine.leafletUpdateDate = DateTime.Now;
+                                    medicine.leafletData = leaflet;
+
+                                    await medicinesRepo.Update(medicine);
+
+                                    if (sendLeaflets)
+                                    {
+                                        await medicinesService.AddUpdateLeaflet(new List<Guid>() { medicine.MedicineID }, leaflet);
+                                    }
+                                }
+                                else if (sendLeaflets && medicine.leafletData != null)
+                                {
+                                    await medicinesService.AddUpdateLeaflet(new List<Guid>() { medicine.MedicineID }, medicine.leafletData);
+                                }
                             }
                             catch (Exception ex)
                             {

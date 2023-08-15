@@ -11,5 +11,7 @@ namespace MedicinesManagement.Models
         public string Power { get; set; }
         public string CompanyName { get; set; }
         public string leafletURL { get; set; }
+        public byte[]? leafletData { get; set; }
+        public DateTime? leafletUpdateDate { get; set; }
     }
 }
