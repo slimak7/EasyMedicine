@@ -1,24 +1,27 @@
-﻿using MedicinesManagement.Repos.Medicines;
+﻿using MedicinesManagement.Helpers;
+using MedicinesManagement.Repos.Medicines;
 using MedicinesManagement.Services.Medicines;
 using System.Runtime.InteropServices;
 
 namespace MedicinesManagement.BackgroundServices
 {
-    public class LeafletsAutoDownload : BackgroundService
+    public class LeafletsAutoProcessing : BackgroundService
     {
         private readonly IServiceScopeFactory _scopeFactory;
         private readonly IConfiguration _configuration;
+        private readonly MedicineAutoCategorization _medicineAutoCategorization;
 
-        public LeafletsAutoDownload(IServiceScopeFactory serviceScopeFactory, IConfiguration configuration)
+        public LeafletsAutoProcessing(IServiceScopeFactory serviceScopeFactory, IConfiguration configuration, MedicineAutoCategorization medicineAutoCategorization)
         {
             _scopeFactory = serviceScopeFactory;
             _configuration = configuration;
+            _medicineAutoCategorization = medicineAutoCategorization;
         }
 
         protected override async Task<Task> ExecuteAsync(CancellationToken stoppingToken)
         {
             string sectionName = RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ? "DockerDepl" : "Dev";
-            bool sendLeaflets = _configuration.GetSection(sectionName).GetValue<bool>("LeafletsAutoProcessing");
+            bool sendLeaflets = _configuration.GetSection(sectionName).GetValue<bool>("SendLeaflets");
 
             
             while (!stoppingToken.IsCancellationRequested)

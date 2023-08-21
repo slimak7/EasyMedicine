@@ -1,6 +1,7 @@
 ﻿using MedicinesManagement.AsyncDataServices;
 using MedicinesManagement.BackgroundServices;
 using MedicinesManagement.Context;
+using MedicinesManagement.Helpers;
 using MedicinesManagement.Repos.ActiveSubstances;
 using MedicinesManagement.Repos.Medicines;
 using MedicinesManagement.Services.Medicines;
@@ -57,7 +58,9 @@ namespace MedicinesManagement
             services.AddScoped<IActiveSubstancesRepo, ActiveSubstancesRepo>();
             services.AddScoped<HttpClient, HttpClient>();
             services.AddSingleton<IMessageBusClient, MessageBusClient>();
-            services.AddHostedService<LeafletsAutoDownload>();    
+            services.AddSingleton<MedicineAutoCategorization>();
+            services.AddHostedService<LeafletsAutoProcessing>();
+
 
             services.AddDbContext<AppDbContext>(options => options
             .UseSqlServer(Configuration.GetConnectionString("Default"), options => 
