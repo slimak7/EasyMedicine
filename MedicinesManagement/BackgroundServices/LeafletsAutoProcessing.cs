@@ -1,4 +1,5 @@
 ﻿using MedicinesManagement.Helpers;
+using MedicinesManagement.Models;
 using MedicinesManagement.Repos.Medicines;
 using MedicinesManagement.Services.Medicines;
 using System.Runtime.InteropServices;
@@ -23,14 +24,14 @@ namespace MedicinesManagement.BackgroundServices
             string sectionName = RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ? "DockerDepl" : "Dev";
             bool sendLeaflets = _configuration.GetSection(sectionName).GetValue<bool>("SendLeaflets");
 
-            
+
             while (!stoppingToken.IsCancellationRequested)
             {
                 using (var scope = _scopeFactory.CreateScope())
                 {
                     var medicinesRepo = scope.ServiceProvider.GetRequiredService<IMedicinesRepo>();
                     var httpClient = scope.ServiceProvider.GetRequiredService<HttpClient>();
-                    var medicinesService = scope.ServiceProvider.GetRequiredService<IMedicinesService>();   
+                    var medicinesService = scope.ServiceProvider.GetRequiredService<IMedicinesService>();
 
                     var medicines = await medicinesRepo.GetAll();
 
@@ -40,7 +41,7 @@ namespace MedicinesManagement.BackgroundServices
                         {
                             try
                             {
-                                if (medicine.leafletUpdateDate == null || (DateTime.Now.Subtract((DateTime)medicine.leafletUpdateDate)).Days > _configuration.GetValue<int>("UpdateLeafletDaysPeriod"))
+                                if (medicine.MedicineData?.leafletUpdateDate == null || (DateTime.Now.Subtract((DateTime)medicine.MedicineData.leafletUpdateDate)).Days > _configuration.GetValue<int>("UpdateLeafletDaysPeriod"))
                                 {
 
                                     var httpClientHandler = new HttpClientHandler
@@ -53,8 +54,12 @@ namespace MedicinesManagement.BackgroundServices
 
                                     var leaflet = await response.Content.ReadAsByteArrayAsync();
 
-                                    medicine.leafletUpdateDate = DateTime.Now;
-                                    medicine.leafletData = leaflet;
+                                    if (medicine.MedicineData == null)
+                                    {
+                                        medicine.MedicineData = new MedicineData();
+                                    }
+                                    medicine.MedicineData.leafletUpdateDate = DateTime.Now;
+                                    medicine.MedicineData.leafletData = leaflet;
 
                                     await medicinesRepo.Update(medicine);
 
@@ -63,9 +68,9 @@ namespace MedicinesManagement.BackgroundServices
                                         await medicinesService.AddUpdateLeaflet(new List<Guid>() { medicine.MedicineID }, leaflet);
                                     }
                                 }
-                                else if (sendLeaflets && medicine.leafletData != null)
+                                else if (sendLeaflets && medicine.MedicineData.leafletData != null)
                                 {
-                                    await medicinesService.AddUpdateLeaflet(new List<Guid>() { medicine.MedicineID }, medicine.leafletData);
+                                    await medicinesService.AddUpdateLeaflet(new List<Guid>() { medicine.MedicineID }, medicine.MedicineData.leafletData);
                                 }
                             }
                             catch (Exception ex)
@@ -73,6 +78,7 @@ namespace MedicinesManagement.BackgroundServices
                                 Console.WriteLine(ex.Message);
                             }
                         }
+
                     }
                 }
             }

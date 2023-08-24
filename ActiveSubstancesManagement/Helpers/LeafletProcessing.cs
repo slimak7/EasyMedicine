@@ -62,7 +62,6 @@ namespace ActiveSubstancesManagement.Helpers
                             string guid = reader.GetAttribute("SubstanceID");
 
                             translationPairs.Add(name, guid);
-
                         }
                     }
                 }
