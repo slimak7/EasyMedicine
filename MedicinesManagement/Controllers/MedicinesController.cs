@@ -68,6 +68,30 @@ namespace MedicinesManagement.Controllers
         }
 
         [HttpGet]
+        [Route("GetMedicines/GetBySubstance/{substanceID}")]
+        public async Task<IActionResult> GetMedicinesBySubstance(Guid substanceID)
+        {
+            if (!ModelState.IsValid)
+            {
+                return new BadRequestObjectResult("Invalid data provided");
+            }
+            try
+            {
+                var response = await _medicinesService.GetMedicinesBySubstance(substanceID);
+
+                return Ok(response);
+            }
+            catch (DataAccessException e)
+            {
+                return BadRequest(new MedicinesListResponse(e.Message));
+            }
+            catch (Exception e)
+            {
+                return Problem(e.Message);
+            }
+        }
+
+        [HttpGet]
         [Route("GetMedicines/GetInteractions/{medicineID}")]
         public async Task<IActionResult> GetMedicinesInteractions(Guid medicineID)
         {

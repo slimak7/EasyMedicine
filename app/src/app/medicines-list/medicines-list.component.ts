@@ -29,8 +29,8 @@ export class MedicinesListComponent  {
   interactions: Interaction[] = [];
 
   foundedMedicines: Medicine[] = [];
-  medicinesColumnsToDisplay = ['ID', 'Name', 'Power', 'Company', 'Substances'];
-  interactionsColumnsToDisplay = ['OriginalName', 'TranslatedName', 'InteractionLevel', 'InteractionDescription'];
+  medicinesColumnsToDisplay = ['ID', 'Name', 'Power', 'Company', 'Substances', 'Actions'];
+  interactionsColumnsToDisplay = ['OriginalName', 'TranslatedName', 'InteractionLevel', 'InteractionDescription', 'Actions'];
   medicineName: string = "";
 
 
@@ -46,5 +46,9 @@ export class MedicinesListComponent  {
 
   getInteractions(id: string): void {
     this.medicinesService.getMedicinesInteractions(id).subscribe(interactions => { this.interactions = interactions.interactions; console.log(this.interactions); });
+  }
+
+  getMedicinesBySubstance(id: string): void {
+    this.medicinesService.getMedicinesBySubstance(id).subscribe(medicines => { this.foundedMedicines = medicines.medicines; console.log(this.foundedMedicines); });
   }
 }

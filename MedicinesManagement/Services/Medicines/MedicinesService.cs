@@ -13,13 +13,15 @@ namespace MedicinesManagement.Services.Medicines
     {
         private IMedicinesRepo _medicinesRepo;
         private IMedicineActiveSubstancesRepo _activeSubstancesRepo;
+        private IMedicineActiveSubstancesRepo _medicineActiveSubstancesRepo;
         private IMessageBusClient _messageBusClient;
 
-        public MedicinesService(IMedicinesRepo medicinesRepo, IMedicineActiveSubstancesRepo activeSubstancesRepo, IMessageBusClient messageBusClient)
+        public MedicinesService(IMedicinesRepo medicinesRepo, IMedicineActiveSubstancesRepo activeSubstancesRepo, IMessageBusClient messageBusClient, IMedicineActiveSubstancesRepo medicineActiveSubstancesRepo)
         {
             _medicinesRepo = medicinesRepo;
             _activeSubstancesRepo = activeSubstancesRepo;  
             _messageBusClient = messageBusClient;
+            _medicineActiveSubstancesRepo = medicineActiveSubstancesRepo;
         }
 
         public async Task AddUpdateLeaflet(List<Guid> medicineID, byte[] leaflet)
@@ -95,6 +97,37 @@ namespace MedicinesManagement.Services.Medicines
 
                 return new MedicinesListResponse(medicineResponses);
             }
+        }
+
+        public async Task<MedicinesListResponse> GetMedicinesBySubstance(Guid substanceID)
+        {
+            var connections = await _medicineActiveSubstancesRepo.GetAllByCondition(x => x.ActiveSubstance.SubstanceID == substanceID);
+
+            if (connections == null)
+            {
+                throw new DataAccessException("No medicines with given substance");
+            }
+
+            var medicines = await _medicinesRepo.GetAllByCondition(x => connections.Select(x => x.Medicine.MedicineID).Contains(x.MedicineID));
+
+            List<MedicineResponse> medicineResponses = new List<MedicineResponse>();
+
+            foreach (var medicine in medicines)
+            {
+                var activeSubstancesForMedicine = await _activeSubstancesRepo.GetAllByCondition(x => x.Medicine.MedicineID == medicine.MedicineID);
+
+                medicineResponses.Add(new MedicineResponse()
+                {
+                    MedicineName = medicine.MedicineName,
+                    MedicineID = medicine.MedicineID.ToString(),
+                    CompanyName = medicine.CompanyName,
+                    Power = medicine.Power,
+                    ActiveSubstances = activeSubstancesForMedicine.Select(x => x.ActiveSubstance.SubstanceName).ToList()
+                });
+            }
+
+            return new MedicinesListResponse(medicineResponses);
+
         }
     }
 }

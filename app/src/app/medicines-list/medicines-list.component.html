@@ -40,8 +40,14 @@
                 <th mat-header-cell *matHeaderCellDef> Substances </th>
                 <td mat-cell *matCellDef="let medicine"> {{medicine.activeSubstances}} </td>
             </ng-container>
+            <ng-container matColumnDef="Actions">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let row">
+                  <button mat-button (click)="getInteractions(row.medicineID)">Show interactions</button>
+                </td>
+              </ng-container>
             <tr mat-header-row *matHeaderRowDef="medicinesColumnsToDisplay"></tr>
-            <tr mat-row *matRowDef="let myRowData; columns: medicinesColumnsToDisplay" (click)="getInteractions(myRowData.medicineID)"></tr>
+            <tr mat-row *matRowDef="let myRowData; columns: medicinesColumnsToDisplay"></tr>
         </table>
     </section>
 </div>
@@ -64,6 +70,12 @@
                 <th mat-header-cell *matHeaderCellDef> Interaction description </th>
                 <td mat-cell *matCellDef="let interaction"> {{interaction.interactionDescription}} </td>
             </ng-container>
+            <ng-container matColumnDef="Actions">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let row">
+                  <button mat-button (click)="getMedicinesBySubstance(row.substance.substanceID)">Show meds with this substance</button>
+                </td>
+              </ng-container>
             <tr mat-header-row *matHeaderRowDef="interactionsColumnsToDisplay"></tr>
             <tr mat-row *matRowDef="let myRowData; columns: interactionsColumnsToDisplay"></tr>
         </table>

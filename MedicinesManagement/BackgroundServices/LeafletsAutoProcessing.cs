@@ -23,7 +23,7 @@ namespace MedicinesManagement.BackgroundServices
         {
             string sectionName = RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ? "DockerDepl" : "Dev";
             bool sendLeaflets = _configuration.GetSection(sectionName).GetValue<bool>("SendLeaflets");
-
+            bool downloadLeaflets = _configuration.GetSection(sectionName).GetValue<bool>("AutoDownloadLeaflets");
 
             while (!stoppingToken.IsCancellationRequested)
             {
@@ -39,46 +39,42 @@ namespace MedicinesManagement.BackgroundServices
                     {
                         if (medicine.leafletURL != "")
                         {
-                            try
+                            if (downloadLeaflets)
                             {
-                                if (medicine.MedicineData?.leafletUpdateDate == null || (DateTime.Now.Subtract((DateTime)medicine.MedicineData.leafletUpdateDate)).Days > _configuration.GetValue<int>("UpdateLeafletDaysPeriod"))
+                                try
                                 {
-
-                                    var httpClientHandler = new HttpClientHandler
+                                    if (medicine.MedicineData?.leafletUpdateDate == null || (DateTime.Now.Subtract((DateTime)medicine.MedicineData.leafletUpdateDate)).Days > _configuration.GetValue<int>("UpdateLeafletDaysPeriod"))
                                     {
-                                        SslProtocols = System.Security.Authentication.SslProtocols.Tls12,
-                                        UseDefaultCredentials = true
-                                    };
-                                    HttpClient client = new HttpClient(httpClientHandler);
-                                    var response = await client.GetAsync(medicine.leafletURL);
+                                        var httpClientHandler = new HttpClientHandler
+                                        {
+                                            SslProtocols = System.Security.Authentication.SslProtocols.Tls12,
+                                            UseDefaultCredentials = true
+                                        };
+                                        HttpClient client = new HttpClient(httpClientHandler);
+                                        var response = await client.GetAsync(medicine.leafletURL);
 
-                                    var leaflet = await response.Content.ReadAsByteArrayAsync();
+                                        var leaflet = await response.Content.ReadAsByteArrayAsync();
 
-                                    if (medicine.MedicineData == null)
-                                    {
-                                        medicine.MedicineData = new MedicineData();
-                                    }
-                                    medicine.MedicineData.leafletUpdateDate = DateTime.Now;
-                                    medicine.MedicineData.leafletData = leaflet;
+                                        if (medicine.MedicineData == null)
+                                        {
+                                            medicine.MedicineData = new MedicineData();
+                                        }
+                                        medicine.MedicineData.leafletUpdateDate = DateTime.Now;
+                                        medicine.MedicineData.leafletData = leaflet;
 
-                                    await medicinesRepo.Update(medicine);
-
-                                    if (sendLeaflets)
-                                    {
-                                        await medicinesService.AddUpdateLeaflet(new List<Guid>() { medicine.MedicineID }, leaflet);
-                                    }
+                                        await medicinesRepo.Update(medicine);
+                                    }                                 
                                 }
-                                else if (sendLeaflets && medicine.MedicineData.leafletData != null)
+                                catch (Exception ex)
                                 {
-                                    await medicinesService.AddUpdateLeaflet(new List<Guid>() { medicine.MedicineID }, medicine.MedicineData.leafletData);
+                                    Console.WriteLine(ex.Message);
                                 }
                             }
-                            catch (Exception ex)
+                            if (sendLeaflets && medicine.MedicineData?.leafletData != null)
                             {
-                                Console.WriteLine(ex.Message);
+                                await medicinesService.AddUpdateLeaflet(new List<Guid>() { medicine.MedicineID }, medicine.MedicineData.leafletData);
                             }
                         }
-
                     }
                 }
             }

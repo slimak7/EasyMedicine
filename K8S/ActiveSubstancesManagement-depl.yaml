@@ -20,6 +20,11 @@ spec:
                       name: http       
                     - containerPort: 443
                       name: https
+                  resources:
+                    limits: 
+                        memory: "4000Mi"
+                        cpu: "650m"
+
 ---
 apiVersion: v1
 kind: Service

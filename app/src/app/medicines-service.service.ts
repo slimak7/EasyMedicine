@@ -10,7 +10,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class MedicinesServiceService {
 
-  private medicinesURL = "http://192.168.0.126:45456/";
+  private medicinesURL = "http://192.168.0.126:45455/";
 
   constructor(private http: HttpClient) { }
 
@@ -23,6 +23,13 @@ export class MedicinesServiceService {
 
   public getMedicinesByName(name: string): Observable<MedicinesResponse> {
     return this.http.get<MedicinesResponse>(`${this.medicinesURL}Medicines/GetMedicines/GetByName/${name}`)
+    .pipe(
+      catchError(this.handleError<MedicinesResponse>('getMedicines', ))
+    );
+  }
+
+  public getMedicinesBySubstance(substanceID: string): Observable<MedicinesResponse> {
+    return this.http.get<MedicinesResponse>(`${this.medicinesURL}Medicines/GetMedicines/GetBySubstance/${substanceID}`)
     .pipe(
       catchError(this.handleError<MedicinesResponse>('getMedicines', ))
     );
