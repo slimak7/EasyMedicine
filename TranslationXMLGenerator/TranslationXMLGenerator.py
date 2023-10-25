@@ -14,11 +14,12 @@ with open("Language_PL_base_file.csv", encoding="UTF-8") as baseFile:
     print(translations)
 
 connection = pyodbc.connect('Driver={ODBC Driver 18 for SQL Server};'
-                      'Server=(localdb)\\MSSQLLocalDB;'
+                      'Server=192.168.0.231,1433;'
                       'Database=MedicinesDB;'
                       'Trusted_Connection=no;'
-                      'UID=sk;'
-                      'PWD=sssqddffrg45$$g;')
+                      'UID=medicines_client;'
+                      'PWD=medicines2525;'
+                      'TrustServerCertificate=yes;')
 
 cursor = connection.cursor()
 

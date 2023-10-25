@@ -100,6 +100,10 @@ namespace MedicinesManagement.Migrations
                     b.Property<Guid>("ATCCategoryID")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("ATCFullCategory")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<Guid>("MedicineID")
                         .HasColumnType("uniqueidentifier");
 
