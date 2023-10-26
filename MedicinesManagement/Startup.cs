@@ -3,6 +3,7 @@ using MedicinesManagement.BackgroundServices;
 using MedicinesManagement.Context;
 using MedicinesManagement.Helpers;
 using MedicinesManagement.Repos.ActiveSubstances;
+using MedicinesManagement.Repos.MedicineATCCategory;
 using MedicinesManagement.Repos.Medicines;
 using MedicinesManagement.Services.Medicines;
 using MedicinesManagement.SyncDataServices;
@@ -56,6 +57,7 @@ namespace MedicinesManagement
             services.AddScoped<IMedicinesService, MedicinesService>();
             services.AddScoped<IHttpDataClient,  HttpDataClient>();
             services.AddScoped<IActiveSubstancesRepo, ActiveSubstancesRepo>();
+            services.AddScoped<IMedicineATCCategoryRepo, MedicineATCCategoryRepo>();
             services.AddScoped<HttpClient, HttpClient>();
             services.AddSingleton<IMessageBusClient, MessageBusClient>();
             services.AddSingleton<MedicineAutoCategorization>();
