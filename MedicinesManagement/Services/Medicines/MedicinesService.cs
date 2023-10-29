@@ -1,5 +1,6 @@
 ﻿using MedicinesManagement.AsyncDataServices;
 using MedicinesManagement.Exceptions;
+using MedicinesManagement.Extensions;
 using MedicinesManagement.Repos.ActiveSubstances;
 using MedicinesManagement.Repos.MedicineATCCategory;
 using MedicinesManagement.Repos.Medicines;
@@ -72,9 +73,9 @@ namespace MedicinesManagement.Services.Medicines
             }
         }
 
-        public async Task<MedicinesListResponse> GetMedicinesByRange(int index, int count)
+        public async Task<MedicinesListResponse> GetMedicinesByRange(int page, int count)
         {
-            var medicines = await _medicinesRepo.GetAllByIndex(index, count);
+            var medicines = await _medicinesRepo.GetAllByIndex(page, count);
 
             if (medicines.IsNullOrEmpty())
             {
@@ -135,7 +136,7 @@ namespace MedicinesManagement.Services.Medicines
 
         public async Task<MedicinesListResponse> GetSimilarMedicines(Guid medicineID, int page, int count)
         {
-            var medicineATC = await _medicineATCCategoryRepo.GetByCondition(x => x.Medicine.MedicineID == medicineID);
+            var medicineATC = await _medicineATCCategoryRepo.GetByCondition(x => x.MedicineID == medicineID);
 
             if (medicineATC == null)
             {
@@ -145,21 +146,23 @@ namespace MedicinesManagement.Services.Medicines
             Regex re = new Regex(@$"^({medicineATC.ATCFullCategory.Substring(0, 4)})[a-z]{{1}}[0-9]{{2}}", RegexOptions.IgnoreCase);
 
             var medicinesInCategory = await _medicineATCCategoryRepo.GetAllByCondition(x =>
-                x.ATCCategory.ATCCategoryID == medicineATC.ATCCategory.ATCCategoryID, page, count);
+                x.ATCCategory.ATCCategoryID == medicineATC.ATCCategory.ATCCategoryID);
 
             if (medicinesInCategory.IsNullOrEmpty())
             {
                 throw new DataAccessException("There are no similar medicines");
             }
 
-            var medicinesATC = medicinesInCategory.FindAll(x => re.IsMatch(x.ATCFullCategory));
+            var medicinesATC = medicinesInCategory.FindAll(x => re.IsMatch(x.ATCFullCategory)).GetSafeRange(page, count);
 
             if (medicinesATC.IsNullOrEmpty())
             {
                 throw new DataAccessException("There are no similar medicines");
             }
 
-            var medicines = medicinesATC.Select(x => x.Medicine);
+            var medicinesID = medicinesATC.Select(x => x.MedicineID);
+
+            var medicines = await _medicinesRepo.GetAllByCondition(x => medicinesID.Contains(x.MedicineID));
 
             List<MedicineResponse> medicineResponses = new List<MedicineResponse>();
 

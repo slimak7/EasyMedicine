@@ -1,4 +1,5 @@
 ﻿using MedicinesManagement.Context;
+using MedicinesManagement.Extensions;
 using MedicinesManagement.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -44,23 +45,12 @@ namespace MedicinesManagement.Repos.Medicines
             return list.FindAll(x => condition(x));
         }
 
-        public async Task<List<Medicine>> GetAllByIndex(int index, int count)
+        public async Task<List<Medicine>> GetAllByIndex(int page, int count)
         {
             var list = await GetAll();
+            list = list.ToList();
 
-            if (index > list.Count() - 1)
-            {
-                return null;
-            }
-
-            int numberOfAvailableElements = list.Count() - index;
-
-            if (count > numberOfAvailableElements)
-            {
-                count = numberOfAvailableElements;
-            }
-
-            return list.GetRange(index, count);
+            return list.GetSafeRange(page, count);
         }
 
         public async Task<Medicine> GetByCondition(Func<Medicine, bool> condition)

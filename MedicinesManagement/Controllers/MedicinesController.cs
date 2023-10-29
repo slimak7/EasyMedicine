@@ -20,8 +20,8 @@ namespace MedicinesManagement.Controllers
         }
 
         [HttpGet]
-        [Route("GetMedicines/GetByRange/{index}/{count}")]
-        public async Task<IActionResult> GetMedicinesByRange(int index, int count)
+        [Route("GetMedicines/GetByRange/{page}/{count}")]
+        public async Task<IActionResult> GetMedicinesByRange(int page, int count)
         {
             if (!ModelState.IsValid)
             {
@@ -29,7 +29,7 @@ namespace MedicinesManagement.Controllers
             }
             try
             {
-                var response = await _medicinesService.GetMedicinesByRange(index, count);
+                var response = await _medicinesService.GetMedicinesByRange(page, count);
 
                 return Ok(response);
             }

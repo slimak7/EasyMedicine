@@ -44,25 +44,6 @@ namespace MedicinesManagement.Repos.MedicineATCCategory
             return list.FindAll(x => condition(x));
         }
 
-        public async Task<List<Models.MedicineATCCategory>> GetAllByCondition(Func<Models.MedicineATCCategory, bool> condition, int page, int count)
-        {
-            var list = await GetAll();
-
-            var meds = list.FindAll(x => condition(x));
-
-            int index = page == 0 ? (page * count) : (page * count) - 1;
-
-            if (index >= meds.Count)
-            {
-                return new List<Models.MedicineATCCategory>();
-            }
-            if (index >= meds.Count - count)
-            {
-                count = meds.Count - count - 1;
-            }
-
-            return meds.GetRange(index, count);
-        }
 
         public async Task<List<Models.MedicineATCCategory>> GetAllByIndex(int index, int count)
         {
