@@ -2,15 +2,16 @@ select top 50 * from Medicines
 select top 50 * from ActiveSubstances
 go;
 
-use MedicinesDB;
+use MedicinesDB
+delete from MedicineActiveSubstances
+delete from MedicineATCCategories
 delete from Medicines
 delete from ActiveSubstances
-delete from MedicineActiveSubstances
-go;
+go
 
-use MedicinesInteractionsDB;
-delete from Interactions;
-go;
+use MedicinesInteractionsDB
+delete from Interactions
+go
 
 
 use MedicinesDB;

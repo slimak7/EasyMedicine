@@ -143,7 +143,7 @@ namespace MedicinesManagement.Services.Medicines
                 throw new DataAccessException("There is no entry in ATC table for given medicine ID");
             }
 
-            Regex re = new Regex(@$"^({medicineATC.ATCFullCategory.Substring(0, 4)})[a-z]{{1}}[0-9]{{2}}", RegexOptions.IgnoreCase);
+            Regex re = new Regex(@$"^({medicineATC.ATCFullCategory.Substring(0, 5)})[0-9]{{2}}", RegexOptions.IgnoreCase);
 
             var medicinesInCategory = await _medicineATCCategoryRepo.GetAllByCondition(x =>
                 x.ATCCategory.ATCCategoryID == medicineATC.ATCCategory.ATCCategoryID);
